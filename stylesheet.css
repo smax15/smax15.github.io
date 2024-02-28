@@ -1,0 +1,48 @@
+#header{
+    background: #ff8329;
+    width: 110%;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    padding: 25px;
+}
+
+body{
+    background: #ffffff;
+    position: absolute;
+    top: 0px;
+    font-family:  futura, sans-serif;
+    padding-top: 125px;
+}
+
+footer{
+      background: black;
+      color: white;
+      width: 110%;
+
+}
+a{
+    color: purple;
+    text-decoration: none;
+}
+a:hover{
+    color: green;
+}
+#herobanner{
+    width: 50%;
+}
+}
+.bottomMenu{
+    background: #f3f3f3;
+    position: relative;
+    float: left;
+    height:250px;
+    width: 25%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+table{
+    border-width: 1px;
+}
