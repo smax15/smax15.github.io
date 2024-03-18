@@ -1,48 +1,262 @@
-#header{
-    background: #ff8329;
-    width: 110%;
-    position: absolute;
-    left: -10px;
-    top: -10px;
-    padding: 25px;
-}
-
 body{
-    background: #ffffff;
-    position: absolute;
-    top: 0px;
     font-family:  futura, sans-serif;
-    padding-top: 125px;
+    margin: auto;
+    background: linear-gradient(to top, #daccbf, #dcbb9d);
 }
 
-footer{
-      background: black;
-      color: white;
-      width: 110%;
-
+table, th, td{
+    border:  1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
 }
 a{
-    color: purple;
+    color: #124390;
     text-decoration: none;
 }
 a:hover{
     color: green;
 }
-#herobanner{
-    width: 50%;
-}
-}
-.bottomMenu{
-    background: #f3f3f3;
-    position: relative;
-    float: left;
-    height:250px;
-    width: 25%;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 15px;
+.button{
+    padding: 0px;
+    border: none;
+    box-shadow: 3px 3px 10px #00000015;
+    font-family:  futura, sans-serif;
     text-align: center;
 }
-table{
-    border-width: 1px;
+.button:hover{
+    box-shadow: 3px 3px 10px #00000035;
 }
+h3{
+    margin-bottom: 3px;
+}
+h4{
+    margin-bottom: 0px;
+}
+#quickstart{
+    padding-bottom: 50px;
+}
+#hometext{
+    width: 1000px;
+    margin: auto;
+}
+
+/*image styling*/
+.infoimg{
+    width: 190px;
+}
+.smallimg{
+    width: 100px;
+}
+#homehero{
+    width: 100%;
+    height: 500px;
+    background-image:url(img/background_dark.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+.textoverimage{
+    text-shadow: #000000 5px 0 10px;
+    font-size: 30px;
+    padding: 150px;
+}
+.imagecontainer{
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/*side menu styling*/
+.sidemenubutton{
+    padding: 10px 20px 10px 20px;
+    width: 300px;
+    float: left;
+    text-align: left;
+    background: #f3f3f3;
+    border: 1px solid #e5e5e5;
+}
+.sidemenubutton:hover{
+    background: black;
+    color: #f3f3f3;
+    border: 0px solid #e5e5e5;
+    border-left: 3px solid crimson;
+}
+#sidemenu{
+    position:fixed;
+    width: 200px;
+}
+
+/*download button styling*/
+#zipfile{
+    padding: 20px 20px 20px 20px;
+    width: 170px;
+    border-radius: 6px;
+    background: #32a4d5;
+}
+#zipfile:hover{
+    background: #69be5a;
+    font-weight: bold;
+}
+
+/*6 col-grid overall page*/
+.header-item{
+    grid-area: header;
+    background: #f3f3f3;
+    padding: 0px 100px 0px 100px;
+    border-bottom: 1px solid #55555540;
+    box-shadow: 0px 1px 5px #00000015;
+}
+.banner-item{
+    grid-area:  banner;
+    color: white;
+    text-align: center;
+    padding: 120px 0;
+    height: 100px;
+}
+.main-item{
+    grid-area:  main;
+    padding: 50px 100px 100px 100px;
+
+}
+.footer-item{
+    grid-area: footer;
+    background: #f3f3f3;
+    text-align: center;
+    padding: 70px;
+    border-top: 1px solid #55555540;
+    box-shadow: 0px -1px 5px #00000015;
+}
+.container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 16% [col-start]);
+    grid-template-rows: [first] 125px [row1-end] auto [third-line] auto [fourth-line] 150px [end];
+    column-gap: 15px;
+    grid-template-areas: 
+    "header header header header header header"
+    "banner banner banner banner banner banner"
+    "main main main main main main"
+    "footer footer footer footer footer footer";
+}
+
+/*header*/
+.logo{
+    width: 500px;
+}
+.details{
+    float: right;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+/*menu styles*/
+.menu-1{
+    position: relative;
+    float: left;
+    padding: 0px 20px 0px 20px;
+    left: -20px;
+}
+.menu-1:hover{
+    font-weight: bold;
+}
+
+/* 2 col-grid */
+.item-2col-1{
+    grid-area: col-1;
+    background: #f3f3f3;
+    padding: 15px 45px 55px 45px;
+}
+.item-2col-2{
+    grid-area:  col-2;
+    background: #f3f3f3;
+    padding: 15px 45px 55px 45px;
+}
+.gridcontainer-2col{
+    display: grid;
+    grid-template-columns: [first] 30% [second] auto[end];
+    grid-template-rows: [first] auto [second]auto[end];
+    column-gap: 15px;
+    grid-template-areas: 
+    "col-1 col-2"
+    ". col-2"
+}
+
+/*styling bottom menu*/
+.photo_box{
+    width: 100%;
+}
+
+.label_box{
+    height: 50px;
+}
+
+/* 3 col-grid */
+.col3box{
+    background: #f3f3f3;
+    width: 250px;
+}
+.col3box:hover{
+    color: green;
+    border: 3px solid green;
+}
+#item-3col-1{
+    grid-area: col-1;
+}
+#item-3col-2{
+    grid-area:  col-2;
+}
+#item-3col-3{
+    grid-area: col-3;
+}
+.gridcontainer-3col{
+    text-align: center;
+    justify-items: center;
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 350px [col-start]);
+    grid-template-rows: [first] 225px [end];
+    column-gap: 25px;
+    grid-template-areas: 
+    "col-1 col-2 col-3"
+}
+
+/* 4 col-grid */
+.col4box{
+    background:#ffffff;
+    border:5px solid #e4e5e6;
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px;
+    height: 225px;
+}
+.col4box:hover{
+    background: black;
+    color: white;
+    border:5px solid crimson;
+}
+
+
+.item-4col-1{
+    grid-area: col-1;
+}
+.item-4col-2{
+    grid-area:  col-2;
+}
+.item-4col-3{
+    grid-area: col-3;
+}
+.item-4col-4{
+    grid-area: col-4;
+}
+.gridcontainer-4col{
+    display: grid;
+    grid-template-columns: repeat(4, 200px [col-start]);
+    grid-template-rows: [first] 250px [end];
+    column-gap: 15px;
+    grid-template-areas: 
+    "col-1 col-2 col-3 col-4"
+}
+
