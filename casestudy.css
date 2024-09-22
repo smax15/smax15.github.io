@@ -1,0 +1,142 @@
+ body{
+    background-color: var(--background-black);
+ }
+ /*styling case study intro*/
+
+ .top-container-project{
+    width:100%;
+    color: var(--white);
+}
+
+/*custom background*/
+#amazontitle{
+    background-image: url("img/amazoncover.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+nav{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.casestudy-intro{
+    max-width:1200px;
+    margin:auto;
+    padding:100px 20px 100px 20px;
+}
+.casestudy-intro-left{
+    width:35%;
+}
+
+ /*styling project details*/
+.project-detail-banner{
+    padding:50px 20px 50px 20px;
+    background-color: var(--accent-black);
+    color: var(--white);
+}
+.project-detail-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+    width:960px;
+    margin:auto;
+}
+.detail-title{
+    font-weight: bold;
+}
+
+ /*styling case study frames*/
+.case-study{
+    background-color: var(--background-black);
+    color:var(--white);
+}
+.case-study h2{
+    color:var(--white);
+}
+.case-study-frame{
+    padding:100px 120px 0px 120px;
+}
+.bottom-case-study-frame{
+    padding:100px 120px 100px 120px;
+}
+.case-study-frame-2{
+    padding:100px 120px 0px 120px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+ /*styling case study sub 2 grid sub boxes*/
+ .case-study-2-frames{
+    margin-top:50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+ }
+ .frame-2{
+    background-color: var(--accent-black);
+    padding:30px;
+    margin-bottom: 20px;
+ }
+
+ /* styling quotes*/
+ .quote-box{
+    margin-top:50px;
+    padding: 50px 60px 50px 60px;
+    background-color: var(--accent-black);
+ }
+
+    /*this collapses everything to one column at 768px*/
+    @media screen and (max-width: 768px) {
+        /*styling case study frames*/
+        .case-study-frame, .bottom-case-study-frame, .casestudy-intro{
+            padding:40px 0px 40px 0px;
+        }
+        .case-study-frame-2{
+            padding:40px 0px 40px 0px;
+            width: 100%;
+            margin-bottom: 1.3 em20px;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0px;
+        }
+        .case-study-2-frames{
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0px;
+        }
+        /*project details*/
+        .project-detail-container{
+            width:100%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+        .project-details{
+            width:80%;
+        }
+        #amazontitle{
+            background-image:  linear-gradient( hsl(184, 67%, 55%), hsl(235, 100%, 73%) );
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+        }
+        nav{
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .casestudy-intro{
+            padding:0px 20px 0px 20px;
+        }
+        .casestudy-intro-left{
+            width:85%;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            padding-top:10px;
+         }
+        
+        .display{
+            font-size:32px;
+        }
+
+    }

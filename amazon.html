@@ -3,76 +3,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="personal-webpage.css">
+    <link rel="stylesheet" href="global-stylesheet.css">
+    <link rel="stylesheet" href="casestudy.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✿ Sara Ma - Personal Website ✿</title>
+    <title>Sara Ma - Amazon Music Case Study</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
   
 </head>
 <body>
-    <div class="container" role="main">
-        <div class="top-half">
-            <div class="top-container">
-                <nav>
-                    <a href="#">About</a>
-                    <a href="#">Work</a>
-                    <a href="https://www.linkedin.com/in/sarawma/" target="_blank">
-                        <i class="fab fa-linkedin social-icon linkedin-icon"></i>
-                    </a>
-                    <a href="https://www.instagram.com/sara.w.ma" target="_blank">
-                        <i class="fab fa-instagram social-icon instagram-icon"></i>
-                    </a>
-                </nav>
-            </div>
-
-        </div>
-        <div class="top-container-project">
-                <small>AI-Podcast Recommendations</small>
+        <div id="amazontitle" class="top-container-project">
+            <nav>
+                <a href="portfolio.html" id="icon">🌸</a>
+                <a href="portfolio.html#work">Work</a>
+                <a href="me.html">About</a>
+                <a href="#">Resume</a>
+            </nav>
+            <div class="casestudy-intro">  
+                <div class="casestudy-intro-left">
+                <h4>AI-Podcast Recommendations</h4>
                     <h1>Amazon Music </h1>
                     <p>Podcast Picks, an AI-driven podcast discovery feature, won Best Application of AI for Amazon Music's 2024 Design Challenge.</p>
-                    <img src="img/Amazoncover.png" alt="two screens of showing amazon music podcast discovery">
-                    <div class="project-detail-banner">
-                        <div class="project-details">
-                            <div class="detail-title">
-                            DURATION
-                            </div>
+                </div>  
+            </div>
+            <div class="project-detail-banner">
+                <div class="project-detail-container">
+                    <div class="project-details">
+                            <h4>DURATION</h4>
                             <div class="detail-info">
                             4 Weeks
                             </div>
-                        </div>
-                        <div class="project-details">
-                            <div class="detail-title">
+                    </div>
+                    <div class="project-details">
+                            <h4>
                             TEAM
-                            </div>
+                            </h4>
                             <div class="detail-info">
                             Meng Shi
                             <br>Sara Ma
                             </div>
-                        </div>
-                        <div class="project-details">
-                            <div class="detail-title">
+                    </div>
+                    <div class="project-details">
+                            <h4>
                             SKILLS
-                            </div>
+                            </h4>
                             <div class="detail-info">
                             User Research
                             <br>UX Design
                             </div>
-                        </div>
-                        <div class="project-details">
-                            <div class="detail-title">
+                    </div>
+                    <div class="project-details">
+                            <h4>
                             TOOLS
-                            </div>
+                            </h4>
                             <div class="detail-info">
                             Figma
                             </div>
-                        </div>
                     </div>
-
                 </div>
+
+            </div>
+        </div>
+     <div class="container">         
         <div class="case-study">
             <div class="case-study-frame">
-                <small>THE PROBLEM</small>
+                <h4>THE PROBLEM</h4>
                 <h2>Podcast discovery is frustrating because crucial information to assess new podcasts is difficult to access.</h2>
             </div>
             <div class="bottom-case-study-frame">
@@ -157,39 +156,106 @@
                 <p>The current flow requires users to click into podcast shows to access show information. We bring relevant and personalized AI-generated podcast information out from the podcast show page into the explore page.</p>
                 <img src="img/basically.png" alt="this is a placeholder for the actual image for now">
             </div>
-            <div class="case-study-frame-2">
+            <div class="case-study-frame-2 bottom-case-study-frame">
                 <div>
                     <small>DESIGN</small>
                     <h2>A Card Carousel Accommodates Relevant Information </h2>
                     <p>Implementing a carousel allows users to access more information quickly if they're interested and skip past podcasts if they're not. I used paper prototype testing to arrive at the final card layout. </p>
                 </div>
-                <div><img src="">
+                <div><img src="img/cards.png" alt="this is a placeholder for the actual image for now">
+                </div>
+            </div>
+            <hr>
+            <div class="case-study-frame">
+                <small>TESTING</small>
+                <h2>Ramp Up the Personalization </h2>
+                <p>I conducted 3 user tests and found that participants wanted more obvious indicators that the AI selects and writes based on users’ preferences. We rewrote the headers to emphasize that recommendations and summaries are personalized. </p>
+                <img src="img/cards.png" alt="this is a placeholder for the actual image for now">
+            </div>
+            <div class="case-study-frame">
+                <small>FINAL PROTOTYPE</small>
+                <h2>Presenting Podcast Picks</h2>
+                <div class="case-study-2-frames">
+                    <div class="frame-2">
+                        <div class="detail-title">
+                            <small>Issue #1</small>
+                            <h3>Assessing tone is hard</h3>
+                        </div>
+                        <div class="detail-info">
+                            Recommended podcasts fail to match listeners' preferred podcast style, forcing them to skim transcripts or listen to clips to grasp the content style.
+                        </div>
+                    </div>
+                    <div class="frame-2">
+                        <div class="detail-title">
+                            <small>Issue #2</small>
+                            <h3>Key Info is Missing</h3>
+                        </div>
+                        <div class="detail-info">
+                            Critical details are buried in the podcast show page, making it difficult for listeners to assess many podcasts quickly and effectively.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-case-study-frame">
+                <small>FUTURE CONSIDERATIONS</small>
+                <h2>Podcast Picks in New Contexts</h2>
+                <p>For the design challenge, our scope was limited to the listener's experience. Given more time, Meng and I would have loved to explore how creators would respond to AI representing them and how the design translates across different devices.
+                </p>
+                <div class="case-study-2-frames">
+                    <div class="frame-2">
+                        <div class="detail-title">
+                            <h3>Creator Control</h3>
+                        </div>
+                        <div class="detail-info">
+                            How will creators feel about AI-generated summaries and tone analysis? We would explore tools for podcast creators to review and refine Podcast Picks AI-generated descriptions.
+                        </div>
+                    </div>
+                    <div class="frame-2">
+                        <div class="detail-title">
+                            <h3>Different Devices</h3>
+                        </div>
+                        <div class="detail-info">
+                            How would Podcast Picks look on the Amazon Music web player? How would it integrate with the Amazon Echo and Alexa voice?
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="bottom-case-study-frame">
+                <small>REFLECTIONS</small>
+                <h2>Lessons in Moving Foward</h2>
+                <p>As a part of a design challenge, Meng and I only had 4 weeks to complete the entire project from prompt to presentation. With our short time frame in mind, we outlined milestones for each phase of our projects. Inevitably, our design process wasn't linear but we were always able to move forward with each conversation.
+                </p>
+                <div class="case-study-2-frames">
+                    <div class="frame-2">
+                        <div class="detail-title">
+                            <small>Lesson #1</small>
+                            <h3>Getting Unstuck</h3>
+                        </div>
+                        <div class="detail-info">
+                            Our mentor helped us reframe when we got stuck by reminding us of the bigger picture. I learned to refer back to a Northstar to guide our decisions when the team is stuck. 
+                        </div>
+                    </div>
+                    <div class="frame-2">
+                        <div class="detail-title">
+                            <small>Lesson #2</small>
+                            <h3>Prepardness Pays</h3>
+                        </div>
+                        <div class="detail-info">
+                            Coming to each mentor meeting with clear objectives, questions to ask, and a concise summary of each week's progress allowed us to make the most of our mentor's time. 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        
-        <h2>More Projects</h2>
-        <div class="image-grid">
-                
-                <div class="image-item">
-                    <a href="" >
-                        <p>Cansera</p>
-                        <img src="img/cansera.png" >
-                    </a>
-                </div>
-    
-                <div class="image-item">
-                    <a href="" >
-                        <img src="img/infusion.png" >
-                        <p>Infusion iOS App</p>
-                    </a>
-                </div>
-         </div>
     </div>
-    
+</div>      
     <footer>
-        <p>made with ♥ at Pratt</p>
+        <h2 class="heading">Thanks for stopping by 👋</h2>
+        <p>Want to grab a matcha latte and chat?</p>
+            <p><a href="">Email Me</a> 🌸
+            <a href="">Linkedin</a>
+        </p> 
     </footer>
 </body>
 </html>

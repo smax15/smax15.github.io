@@ -3,105 +3,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="personal-webpage.css">
+    <link rel="stylesheet" href="global-stylesheet.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>✿ Sara Ma - Personal Website ✿</title>
-  
+    <title>Sara Ma - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+
     <div class="container" role="main">
         <div class="top-half">
             <div class="top-container">
                 <nav>
-                    <a href="#">About</a>
-                    <a href="#">Work</a>
-                    <a href="https://www.linkedin.com/in/sarawma/" target="_blank">
-                        <i class="fab fa-linkedin social-icon linkedin-icon"></i>
-                    </a>
-                    <a href="https://www.instagram.com/sara.w.ma" target="_blank">
-                        <i class="fab fa-instagram social-icon instagram-icon"></i>
-                    </a>
+                    <a href="portfolio.html" id="icon">🌸</a>
+                    <a href="portfolio.html#work">Work</a>
+                    <a href="me.html">About</a>
+                    <a href="#">Resume</a>
                 </nav>
-                <h1>Hello! I'm Sara Ma, a Brooklyn-based digital product designer. </h1>
-                <p>I am pursuing my Master's of Science in Information Experience Design at Pratt University. I earned my Bachelors of Science in Arts, Technology, and the Business of Innovation at the University of Southern California's Iovine and Young Academy, focusing on human-centered design and business. </p>
-                <p>I am interested in health design, climate change, and feminism. In my free time, I bake, craft, write and host murder mystery parties.</p>
-            </div>
-
-            <div class="top-container">
-                <img src="img/profile.jpg" alt="Sara Ma">
             </div>
         </div>
-
-        <div class="bottom-half">
-            <div class="bottom-container">
-                <h2>About</h2>
+        <div class="intro-half">
+            <div class="intro-container1">    
+                <h1><i>Sara Ma</i> is a product designer that codes, builds businesses, and designs board games. She dreams of equitable healthcare, slowing climate change, and becoming a dog mom.</h1>
             </div>
-            <div class="bottom-container">
-                <h2>EXPERIENCE :</h2>
-                <ul class="dashed">
-                    <li>Cansera, Customer Experience Designer, 2020-2023</li>
-                    <li>USC, Project Specialist, 2018-2023</li>
-                    <li>Spring Studios, Graphic Design Intern, 2017</li>
-                </ul>
-
-                <h2>AWARDS :</h2>
-                <ul class="dashed">
-                    <li>Amazon Music Design Challenge Finalist, 2024</li>
-                    <li>USC Body Computing SLAM Grand Prize Winner, 2018</li>
-                    <li> WearHacks LA Hackathon Design Winner, 2016</li>
-                </ul>
-            </div>
-            <div class="bottom-container">
-                <h2>EXTRACIRRICULARS : </h2>
-                <ul class="dashed">
-                    <li>AIGA USC Student Chapter President, 2015-2018</li>
-                    <li>Undergraduate Student Government Assistant Director of Graphics, 2017-2018</li>
-                    <li>USC Michelson Research Fellow, 2016-2018</li>
-                </ul>
-                <h2>HOBBIES: </h2>
-                <ul class="dashed">
-                    <li>Photography</li>
-                    <li>Baking</li>
-                    <li>Puzzlemaking</li>
-                </ul>
+            <div class="intro-container2">
+                <p>
+                    <!--<img class="img-round" id="avatar" src="img/27birthday.png" alt="Photo of Sara surrounded by flowers">
+                </p>-->
+                <div id="dog"><iframe src="https://lottie.host/embed/3156c298-14f6-401a-9aba-6248ad589818/vYqRmNoyis.json"></iframe>
+                </div>
             </div>
         </div>
-        <h2>Work</h2>
-        <div class="image-grid">
-            <div class="image-item">
-                    <a href="" >
-                        <img src="img/amazoncover.png" >
-                        <p>Amazon Music</p>
-                    </a>
-                </div>
-                
+        <div class="work-container" id="work">
+            <div class="image-grid">
                 <div class="image-item">
-                    <a href="" >
-                        <p>Cansera</p>
-                        <img src="img/cansera.png" >
-                    </a>
-                </div>
-    
-                <div class="image-item">
-                    <a href="" >
-                        <img src="img/infusion.png" >
-                        <p>Infusion iOS App</p>
-                    </a>
-                </div>
-    
-                <div class="image-item">
-                    <a href="" >
-                        <img src="img/Shiffon.jpeg" >
-                        <p>Shiffon Jewelry</p>
-                    </a>
-                </div>
-         </div>
+                        <a href="amazon.html" >
+                            <img src="img/amazoncover.png" >
+                            <h2>Amazon Music</h2>
+                            <p>Enhancing podcast discovery using AI-generated summaries</p>
+                            <p> <small>Design for AI, Mobile App</small></p>
+                        </a>
+                    </div>
+                    
+                    <div class="image-item">
+                        <a href="" >
+                            <img src="img/cansera.png" >
+                            <h2>Cansera</h2>
+                            <p>Creating a dashboard for a digital biomarker measurement tool</p>
+                            <p> <small>Digital Health, UX Research, Usability Testing</small></p>
+                        </a>
+                    </div>
+                    <div class="image-item">
+                        <a href="" >
+                            <img src="img/Shiffon.jpeg" >
+                            <h2>McDonald's</h2>
+                            <p>Designing a conversational chatbot to assist in ordering food delivery </p>
+                            <p> <small>Conversional UX</small></p>
+                        </a>
+                    </div>
+        
+                    <div class="image-item">
+                        <a href="" >
+                            <img src="img/infusion.png" >
+                            <h2>Infusion</h2>
+                            <p>Improving research compatibility for a patient-facing chemotherapy app </p>
+                            <p> <small>Digital Health, Consumer-facing, UI Design</small></p>
+                        </a>
+                    </div>
+        
+            </div>
+        </div>
     </div>
-    
     <footer>
-        <p>made with ♥ at Pratt</p>
+        <h2>Thanks for stopping by 👋</h2>
+        <p>Want to grab a matcha latte and chat?</p>
+            <p><a href="">Email Me</a> 🌸
+            <a href="">Linkedin</a>
+        </p> 
     </footer>
 </body>
 </html>

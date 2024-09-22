@@ -1,5 +1,5 @@
 
-        body {
+       body {
             /*trust the system ui fonts that are the default font of the operation system 0*/
             font-family: system-ui, sans-serif;
             /*this creates distance between copy lines like in Google docs*/
@@ -14,6 +14,26 @@
             margin: 0 auto;
             padding: 20px;
         }
+        .work-container{
+            background-color: var(--white);
+            padding:32px;
+            margin-top:0px;
+            border-radius: 30px;
+            box-shadow: 0px 10px 25px 10px hsla(0,0%,0%,0.10);
+        }
+        .intro-half{
+            display:flex;
+            justify-content: space-between;
+            margin:75px 0px 75px 0px;
+        }
+        .intro-container1{
+            width:66%;
+            display: flex;
+            align-items: center;
+        }
+        .intro-container2{
+            width:33%
+        }
         .top-half {
             /* This It creates a flex formatting context for its contents. Child elements become flex items.
 It allows for powerful alignment and distribution of space among items in a container, even when their size is unknown or dynamic.*/
@@ -22,7 +42,6 @@ It allows for powerful alignment and distribution of space among items in a cont
 The first item is flush with the start edge of the container, and the last item is flush with the end edge.
 All remaining space is evenly distributed between the items.*/
             justify-content: space-between;
-            margin-bottom: 40px;
         }
         
         .top-container {
@@ -31,10 +50,13 @@ All remaining space is evenly distributed between the items.*/
         }
         .top-container-project{
             width:100%;
+            color: var(--white);
         }
         .bottom-half {
             display: flex;
             justify-content: space-between;
+            margin-top:50px;
+            color: var(--white);
         }
         .bottom-container {
             /* the bottom containers also get a bit more spacing between them*/
@@ -45,15 +67,29 @@ All remaining space is evenly distributed between the items.*/
             max-width: 100%;
             height: auto;
         }
+        .img-round{
+            border-radius: 500px;
+        }
         nav {
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap:18px;
         }
         nav a {
-            margin-right: 10px;
             text-decoration: none;
-            color: #333;
+            color: var(--white);
         }
-
+        #icon:hover{
+            animation: rotation 2s infinite linear;
+        }
+        @keyframes rotation {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(359deg);
+            }
+          }
         /*this allows us to make social media links icons that change color on hover*/
         .social-icon {
             font-size: 24px;
@@ -73,7 +109,7 @@ All remaining space is evenly distributed between the items.*/
         }
 
         h1, h2 {
-            color: #333;
+            /*color: #333;*/
         }
         ul {
             padding-left: 20px;
@@ -83,9 +119,8 @@ All remaining space is evenly distributed between the items.*/
           ul.dashed {
             list-style-type: none;
           }
-
-          /*the styling here replaces bullets with dashes*/
-          ul.dashed > li {
+           /*the styling here replaces bullets with dashes*/
+           ul.dashed > li {
             text-indent: -5px;
           }
           ul.dashed > li:before {
@@ -93,12 +128,20 @@ All remaining space is evenly distributed between the items.*/
             text-indent: -5px;
           }
 
+          /*styling introduction for homepage*/
+        /* #introduction{
+            text-align: center;
+            color:var(--white);
+            padding:250px 0px 100px 0px;
+          }
+        */
+        
+
          /*the styling here is for the image grid*/
          .image-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            padding-top:10px;
          }
 
          .image-item {
@@ -107,14 +150,15 @@ All remaining space is evenly distributed between the items.*/
 
          .image-item img {
             width: 100%;
-            height: 400px;
+            height: 300px;
             /*preserves the original aspect ratio, but the image occupies all the available space*/
             object-fit: cover;
             /*where you want the image to be positioned*/
             object-position: top;
             display: block;
             opacity:1;
-            z-index: 1;
+            border-radius: 12px;
+            margin-bottom:10px;
           }
 
           .image-item img:hover {
@@ -123,28 +167,42 @@ All remaining space is evenly distributed between the items.*/
           }
     
         .image-item p{
-           color:#333;
-            font-size: xx-large;
+           color:var(--background-black);
             /*position tells us they want us to be absolute in the top position relative to where the copy lives on the image*/
-            position: absolute;
-            top:40%;
-            left: 10%;
-            opacity: 1; /* Show by default */
-            z-index: -1;
+            margin:4px 0px 0px 0px;
+        }
+        
+        .image-item a{
+            text-decoration: none;
         }
 
         footer {
             text-align: center;
             margin-top: 40px;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 50px;
+            background-color: var(--white);
+        }
+
+        footer a{
+            color:var(--accent-black);
+            text-decoration:underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: .2em;
+            padding:4px 10px 4px 10px;
+            /*border: 1px var(--background-black) solid;*/
+            /*border-radius: 20px;*/
+        }
+
+        footer a:hover{
+            color:var(--accent);
+            font-weight: bold;
         }
 
         /*styling project details*/
         .project-detail-banner{
             padding:50px 50px 50px 50px;
-            background-color: #292F30;
-            color: #f4f4f4;
+            background-color: var(--accent-black);
+            color: var(--white);
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
@@ -160,11 +218,11 @@ All remaining space is evenly distributed between the items.*/
 
         /*styling case study frames*/
         .case-study{
-            background-color: #14191A;
-            color:#f4f4f4
+            background-color: var(--background-black);
+            color:var(--white);
         }
         .case-study h2{
-            color:#f4f4f4;
+            color:var(--white);
         }
         .case-study-frame{
             padding:100px 120px 0px 120px;
@@ -187,7 +245,7 @@ All remaining space is evenly distributed between the items.*/
             gap: 10px;
          }
          .frame-2{
-            background-color: #292F30;
+            background-color: var(--accent-black);
             padding:30px;
             margin-bottom: 20px;
          }
@@ -196,8 +254,77 @@ All remaining space is evenly distributed between the items.*/
          .quote-box{
             margin-top:50px;
             padding: 50px 60px 50px 60px;
-            background-color: #292F30;
+            background-color: var(--accent-black);
          }
+
+         /*font styling*/
+            /* Display */
+        /*.display{
+            font-family: Inter;
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 52px;
+            margin-bottom: 8px; 
+         }*/
+         .display{
+            font-family: EB Garamond;
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 52px;
+            margin-bottom: 8px; 
+         }
+
+            /* Heading */
+        /*.heading{    
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40px;
+            margin-bottom: 4px; 
+        }*/
+        .heading{    
+            font-family: EB Garamond;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 40px;
+            margin-bottom: 4px; 
+        }
+            /* Label */
+         .label{
+            font-family: EB Garamond;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            margin-bottom: 8px; 
+         }
+         
+         /* Color */
+         :root{
+            --white: hsl(0, 0%, 95%);
+            --background-black: hsl(190, 13%, 9%);
+            --accent-black: hsl(189, 8%, 17%);
+            --accent:hsl(129, 39%, 29%);
+         }
+         /* <uniquifier>: Use a unique and descriptive class name
+        // <weight>: Use a value from 100 to 900*/
+
+        .outfit-<uniquifier> {
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+        }
+        .eb-garamond-<uniquifier> {
+            font-family: "EB Garamond", serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+          }
 
         /*this collapses everything to one column at 768px*/
         @media screen and (max-width: 768px) {
@@ -208,6 +335,13 @@ All remaining space is evenly distributed between the items.*/
             }
             .top-half,
             .bottom-half {
+                flex-direction: column;
+            }
+            .intro-container1, .intro-container2{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .intro-half{
                 flex-direction: column;
             }
             nav {
@@ -230,6 +364,17 @@ All remaining space is evenly distributed between the items.*/
             }
             .project-details{
                 width:80%;
+            }
+
+            .image-grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 20px;
+                padding-top:10px;
+             }
+            
+            .display{
+                font-size:32px;
             }
 
 

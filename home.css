@@ -1,0 +1,72 @@
+body {
+    /*trust the system ui fonts that are the default font of the operation system 0*/
+    font-family: system-ui, sans-serif;
+    /*this creates distance between copy lines like in Google docs*/
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(#e66465, #9198e5);
+    color:var(--white);
+}
+
+#avatar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+#profile-picture{
+    height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#profile{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+#dog{
+    width:220px;
+    height:350px;
+    overflow:hidden;
+    /*border: 2px var(--white) solid;*/
+    position:relative;
+    padding-left:5em;
+}
+iframe {
+    border: none;
+    zoom: 2.75; -moz-transform: scale(2.75); -moz-transform-origin: 0 0;
+    position:relative; 
+    left: -120px; 
+    top:-20px;
+}
+.me-section{
+    margin-top: 100px;
+}
+.bottom-half {
+    margin:0px;
+}
+@media screen and (max-width: 1000px) {
+    #dog{
+        padding-left:2em;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #profile{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:40px;
+        width: 75%;
+    }
+    #dog{
+        width:220px;
+        height:300px;
+        overflow:hidden;
+        position:relative;
+        padding-left:0em;
+        margin:auto;
+    }
+  }
