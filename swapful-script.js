@@ -44,7 +44,7 @@ function loadTheme(){
         themeBox.innerHTML = `<span>${letterTheme}</span>`;
         themeArea.appendChild(themeBox);
     });
-    console.log('this is theme ' +hint)
+    //console.log('this is theme ' +hint)
 }
 
 const themeArea = document.getElementById("theme-grid");
@@ -52,7 +52,7 @@ const themeArea = document.getElementById("theme-grid");
 //This makes each letter of the theme into - to hide it
 function hideTheme(){
     if (!themeArea) {
-        console.error("Theme area element not found");
+        //console.error("Theme area element not found");
         return;
     }
 
@@ -63,7 +63,7 @@ function hideTheme(){
         hiddenTheme.push(placeholder);
     }
     displayTheme();
-    console.log('this is theme ' +hint)
+    //console.log('this is theme ' +hint)
 }
 
 //This shows the theme (full, half, no revealed) during the game
@@ -81,7 +81,7 @@ function revealTheme(){
     //should use hint as an index to replace letter in hidden Theme for Theme
     hiddenTheme[hint]=theme[hint];
     hint--;
-    console.log(hiddenTheme);
+    //console.log(hiddenTheme);
     themeArea.innerHTML="";
     displayTheme();
     hintCount--;
@@ -101,34 +101,36 @@ function storeLetter(letter, index) {
         const button = document.querySelector(`.image-item:nth-child(${index + 1})`);
         if (button) {
             button.style.backgroundColor = '#a8a8a8';
+            button.style.transition= background-color 0.3s ease;
         }
-        console.log(`First selection: ${letter} at index ${index}`);
+        //console.log(`First selection: ${letter} at index ${index}`);
     } else {
         swap.push({ letter, index });
-        console.log(`Second selection: ${letter} at index ${index}`);
+        //console.log(`Second selection: ${letter} at index ${index}`);
         //if the same button was pushed twice, do not count as move and deselect
         if (swap[0].index==swap[1].index){
             swap = [];
-            console.log('reset swap')
-            console.log('number of moves:'+moves)
+            //console.log('reset swap')
+            //console.log('number of moves:'+moves)
             //turn button back to white
             const button = document.querySelector(`.image-item:nth-child(${index + 1})`);
             button.style.backgroundColor = '#efefef';
+            button.style.transition= background-color 0.3s ease;
         }
         else{
             // Swap letters based on their indices
             const [first, second] = swap;
             [letters[first.index], letters[second.index]] = [letters[second.index], letters[first.index]];
             
-            console.log(`Swapped ${first.letter} at index ${first.index} with ${second.letter} at index ${second.index}`);
-            console.log('Updated letters array:', letters.join(', '));
+            //console.log(`Swapped ${first.letter} at index ${first.index} with ${second.letter} at index ${second.index}`);
+            //console.log('Updated letters array:', letters.join(', '));
             
             // Refresh the display and check the grid
             displayLetters();
             checkGrid();
             moves++;
             document.getElementById('moves').innerHTML=('Moves: '+moves);
-            console.log('number of moves:'+moves)
+            //console.log('number of moves:'+moves)
         }
         // Reset swap array
         swap = [];
@@ -173,7 +175,7 @@ function finishPuzzle() {
         // Reveal the theme
         loadTheme();
     } else {
-        console.log("You're still playing. Keep going!");
+        //console.log("You're still playing. Keep going!");
     }
 }
 //finished message
@@ -213,7 +215,7 @@ function checkHintAvailable(){
     if(hintCount>0){
         //enable hint button
         enableHintButton();        
-        console.log("enable hint button");
+        //console.log("enable hint button");
         }
         else{
             var untilHint=3-totalValidWords.length%3;
@@ -237,7 +239,7 @@ function checkGrid() {
         letters.slice(12, 16).join("")
     ];
     
-    console.log("Words in grid:", gridWords);
+    //console.log("Words in grid:", gridWords);
     
     let correctWords = 0;
     let newValidWords = 0;
@@ -272,9 +274,9 @@ function checkGrid() {
     });
     finishPuzzle();
     
-    console.log(`Total correct answers: ${correctWords}`);
-    console.log(`New valid words found: ${newValidWords}`);
-    console.log(`Total unique valid words found so far: ${totalValidWords.length}`);
+    //console.log(`Total correct answers: ${correctWords}`);
+    //console.log(`New valid words found: ${newValidWords}`);
+    //console.log(`Total unique valid words found so far: ${totalValidWords.length}`);
     var validWordsTracker = document.getElementById('validWords');
     var totalWords=correctWords+totalValidWords.length;
     finalWordsFound=totalWords;
