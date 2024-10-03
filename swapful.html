@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <title>Swapful</title>
+        <link rel="stylesheet" href="swapful-stylesheet.css">
+    </head>
+    <body>
+        <div id="menu">
+            <div id="menu-container">
+         <div id="timer" class="tracker">
+            <span id="tens"></span>:<span id="seconds"></span>
+         </div>
+         <div id="hintused" class="tracker">
+            Hints: 0
+          </div>
+          <div id="validWords" class="tracker">
+            Words: 0
+          </div>
+          <div id="moves" class="tracker">
+            Moves: 0
+          </div>
+         <button id=instructions onclick="instructions();stopTimer()">?</button>
+        </div>
+        </div>
+        <div id="container">
+            <div id="theme">
+                <div class="theme-top">Today's Theme</div>
+                <div id="theme-grid">
+                </div>
+            </div>
+        <div id="gamearea">
+            Spell four 4-letter words
+            <div class="image-grid" id="game-grid">
+            </div>
+        </div>
+        <button id="hint" onclick="revealTheme()" disabled>Hint</button>
+        <div id="hint-counter"></div>
+    </div>
+    <script src="swapful-script.js"></script>
+    </body>
+</html>
