@@ -101,7 +101,6 @@ function storeLetter(letter, index) {
         const button = document.querySelector(`.image-item:nth-child(${index + 1})`);
         if (button) {
             button.style.backgroundColor = '#a8a8a8';
-            button.style.transition= background-color 0.3s ease;
         }
         //console.log(`First selection: ${letter} at index ${index}`);
     } else {
@@ -115,7 +114,6 @@ function storeLetter(letter, index) {
             //turn button back to white
             const button = document.querySelector(`.image-item:nth-child(${index + 1})`);
             button.style.backgroundColor = '#efefef';
-            button.style.transition= background-color 0.3s ease;
         }
         else{
             // Swap letters based on their indices
