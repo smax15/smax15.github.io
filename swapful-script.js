@@ -1,10 +1,13 @@
 //GAME INPUTS
  const letters=[
     "g", "o", "m", "p", "c", "u","b","l","m","e", "t", "o", "p", "l","o","u"
- ];
-
+];
+ /*const letters=[
+    "z", "i", "v", "e", "n", "o","n","r","o","f", "i", "u", "e", "f","r","e"
+ ];//*/
  //answers
  const answer=["pump", "clog", "mule","boot"];
+ //const answer=["five", "four", "nine","zero"];
 
  //valid words
  const otherwords=[ "bump","boom","mump","comb","comm","comp","club","culm","lump","plum","bloc","buco","clop","coup","cube","glum","gulp","pleb","plug","pube","puce","pool","tump","umbo","blog","bull","cleg","clog","come","cope","cull","geum","glob","glom","glop","memo","mobe","mome","mope","mull","poem","pome","pull","temp","tomb","bell","bleu","blue","boll","cell","clou","cool","clue","cult","gull","loup","lube","loot","luce","mell","moll","mule","pego","poll","pule","tulp","ulmo","belt","blet","blot","bole","bolt","bout","bute","celt","clot","cole","colt","cute","glue","glut","lept","lobe","lope","luge","melt","meou","moot","mole","molt","motu","moue","mute","pelt","peut","plot","pole","pout","tube","cote","gelt","gout","loge","mote","ogle","poet","tegu","tome","tope","tool","lout","lute","tell","toll","tolu","tule","ulto","tole"
@@ -12,6 +15,7 @@
 
 //theme
 const theme=["s","h","o","e"];
+//const theme=["n","u","m","b","e","r"]
 const hiddenTheme=[];
 
 //DECLARING VARIABLES
@@ -21,6 +25,7 @@ let hint=theme.length-1;
 let totalValidWords = []; // Moved outside the function to persist between calls
 let hintCount=0;
 let hintUsed=0;
+let finalWordsFound;
 
 //THEME
 //Show the whole theme at the end of the game 
@@ -85,7 +90,7 @@ function revealTheme(){
     }
     hintUsed++;
     const applyHintUsed=document.getElementById(`hintused`);
-    applyHintUsed.innerHTML="Hints: "+hintUsed;
+    //applyHintUsed.innerHTML="Hints: "+hintUsed;
 }
 
 //SWAPPING LETTERS
@@ -95,7 +100,7 @@ function storeLetter(letter, index) {
         //change the button background color to light blue
         const button = document.querySelector(`.image-item:nth-child(${index + 1})`);
         if (button) {
-            button.style.backgroundColor = 'lightblue';
+            button.style.backgroundColor = '#a8a8a8';
         }
         console.log(`First selection: ${letter} at index ${index}`);
     } else {
@@ -108,7 +113,7 @@ function storeLetter(letter, index) {
             console.log('number of moves:'+moves)
             //turn button back to white
             const button = document.querySelector(`.image-item:nth-child(${index + 1})`);
-            button.style.backgroundColor = 'white';
+            button.style.backgroundColor = '#efefef';
         }
         else{
             // Swap letters based on their indices
@@ -177,7 +182,10 @@ function showWinPopup() {
     popup.className = 'win-popup';
     popup.innerHTML = `
         <h2>Hooray!</h2>
-        <p>You finished the Swapful in ${moves+1} moves.</p>
+        <p>You finished Swapful in <strong>${moves+1} moves</strong>,</p>
+        <p>in ${finalWordsFound} words, and using ${hintUsed} hints.</p>
+        <p>Your time was ${formatTime(minutes)}:${formatTime(seconds)}.</p>
+        <p>Today's theme:<strong>${theme.join("")}</strong></p>
         <button onclick="this.parentElement.remove()">Close</button>
     `;
     document.body.appendChild(popup);
@@ -245,8 +253,8 @@ function checkGrid() {
                 const button = document.querySelector(`.image-item:nth-child(${i + 1})`);
                 if (button) {
                     button.disabled = true;
-                    button.style.backgroundColor = 'green';
-                    button.style.color = 'white';
+                    button.style.backgroundColor = 'rgb(210, 230, 249)';
+                    button.style.color = 'black';
                 }
             }
         } else if (otherwords.includes(word) && !totalValidWords.includes(word)) {
@@ -269,6 +277,7 @@ function checkGrid() {
     console.log(`Total unique valid words found so far: ${totalValidWords.length}`);
     var validWordsTracker = document.getElementById('validWords');
     var totalWords=correctWords+totalValidWords.length;
+    finalWordsFound=totalWords;
     validWordsTracker.innerHTML="Words: "+totalWords;
     
     return { correctWords, totalValidWordsCount: totalValidWords.length };
@@ -341,10 +350,12 @@ function instructions() {
     popup.id = 'instructions-box';
     popup.innerHTML = `
         <div class="instructions-content">
-            <h2>How to play:</h2><br><br>
+            <p>SWAPFUL</p>
+            <h2>How to play</h2>
             <p class="instructions-text">
                 <h3>Spell 4 words related to today's theme.</h3>
                 <ul>
+                    <img src="swapful_example.gif" alt="show game example of swapping letters and spelling a word" style="display:block; margin:auto;width:50%; padding-bottom:20px">
                     <li>Move letters by swapping spots.</li>
                     <li>Words are read by row.</li>
                     <li>Letters of found-themed words cannot be moved.</li>
@@ -353,11 +364,11 @@ function instructions() {
                 <h3>Earn hints</h3>
                 <ul>
                     <li>For every 3 non-themed words you find, you earn a hint.</li>
-                    <li>Hints reveal theme letters one at a time.</li>
+                    <li>Hints reveal theme letters one at a time, backwards.</li>
                 </ul>
             </p>
             <div>
-            <button onclick="removeInstructions()">Close</button>
+            <button id="play" onclick="removeInstructions()">Play</button>
         </div>
     `;
     document.body.appendChild(popup);
