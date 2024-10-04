@@ -92,7 +92,7 @@ nav{
     border-bottom:1px var(--white) solid;
 }
  /*styling case study sub 2 grid sub boxes*/
- .case-study-2-frames{
+ .case-study-2-frames, .case-study-2-frames-images{
     margin-top:50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -152,6 +152,11 @@ blockquote{
     width:80%;
     padding:40px 20px 0px 20px;
  }
+
+ .left-image, .right-image{
+    width:80%;
+    margin:auto;
+}
 
  /*framing video*/
  .frame-phone-video{
@@ -287,4 +292,26 @@ blockquote{
             left: -50px;
             top:-60px;
         }
+        /*styling images*/
+        .large-image{
+            position:relative;
+            margin:auto;
+            width:100%;
+            padding:40px 5px 0px 5px;
+        }
     }
+
+     /*this collapses everything to one column at 768px*/
+     @media screen and (max-width: 500px) {
+        /*styling side by side images*/
+        .case-study-2-frames-images{
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0px;
+        }
+        .left-image, .right-image{
+            width:100%;
+        }
+        .right-image{
+            padding:40px 5px 0px 5px;
+        }
+     }
