@@ -103,6 +103,10 @@ nav{
     padding:30px;
     margin-bottom: 20px;
  }
+ .frame-4{
+    background-color: var(--accent-black);
+    padding:30px;
+ }
 
  /* styling quotes*/
  .quote-box{
@@ -242,6 +246,9 @@ blockquote{
             margin-bottom:40px;
             grid-template-columns: repeat(1, 1fr);
             gap: 0px;
+        }
+        .frame-4{
+            margin-bottom: 20px;
         }
         /*project details*/
         .project-detail-container{
