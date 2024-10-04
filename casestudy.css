@@ -14,7 +14,8 @@ a{
 /*custom background*/
 #amazontitle{
     background-image: url("img/amazoncover.png");
-    background-position: center; /* Center the image */
+    background-size: 110%;
+    background-position: right 35% bottom 15%; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 #mcdonaldstitle{
