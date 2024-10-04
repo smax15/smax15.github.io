@@ -69,4 +69,7 @@ iframe {
         padding-left:0em;
         margin:auto;
     }
+    .image-item img{
+        opacity:0%;
+    }
   }
