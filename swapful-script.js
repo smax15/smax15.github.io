@@ -186,7 +186,7 @@ function showWinPopup() {
         <p>in ${finalWordsFound} words, and using ${hintUsed} hints.</p>
         <p>Your time was ${formatTime(minutes)}:${formatTime(seconds)}.</p>
         <p>Today's theme:<strong>${theme.join("")}</strong></p>
-        <button onclick="this.parentElement.remove()">Close</button>
+        <button onclick="location.href='https://forms.gle/GH7r1RwYGgMww9JCA'">Give Sara Feedback!</button>
     `;
     document.body.appendChild(popup);
 }
