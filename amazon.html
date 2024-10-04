@@ -49,19 +49,21 @@
                     </div>
                     <div class="project-details">
                             <h4>
-                            SKILLS
+                            My CONTRIBUTIONS
                             </h4>
                             <div class="detail-info">
                             User Research
                             <br>UX Design
+                            <br>Usability Testing
                             </div>
                     </div>
                     <div class="project-details">
                             <h4>
-                            TOOLS
-                            </h4>
+                            AWARDS
+                            </h4>   
                             <div class="detail-info">
-                            Figma
+                            Amazon Music Design Challenge <br>
+                            Best Application of AI
                             </div>
                     </div>
                 </div>
@@ -70,14 +72,14 @@
         </div>
      <div class="container">         
         <div class="case-study">
-            <div class="case-study-frame">
+            <!--<div class="case-study-frame">
                 <h4>THE PROBLEM</h4>
-                <h2>The valuable information to assess new podcasts is hidden.</h2>
-            </div>
+                <h2>The valuable information is hidden</h2>
+            </div>-->
             <div class="bottom-case-study-frame">
-                <small>KEY ISSUES</small>
-                <h2>Podcast Assessments Need Too Much Effort</h2>
-                <p>Meng and I each conducted four user interviews, and we discovered that podcast listeners <strong>spend a lot of effort to assess new podcasts</strong> and end up unsuccessful in finding a new show to follow. We identified two key issues with the podcast discovery experience that make it hard to sift through podcasts.</p>
+                <small>PROBLEM</small>
+                <h2>Podcast Assessments Take Too Much Effort</h2>
+                <p>My user interviews revealed listeners <strong>spend a lot of effort to assess new podcasts</strong> but are unsuccessful in finding a new show to follow. The podcast discovery experience suffers from two key issues that make it hard to sift through new podcasts.</p>
                 <div class="case-study-2-frames">
                     <div class="frame-2">
                         <div class="detail-title"><a href="#issue1">
@@ -91,7 +93,7 @@
                     <div class="frame-2"> <a href="#issue2">
                         <div class="detail-title">
                             <small>Issue #2</small>
-                            <h2>Key Info is Missing</h2></a>
+                            <h2>Key info is missing</h2></a>
                         </div>
                         <!--<div class="detail-info">
                             Critical details are buried in the podcast show page, making it difficult for listeners to assess many podcasts quickly and effectively.
@@ -99,21 +101,20 @@
                     </div>
                 </div>
             </div>
-            <hr>
             <div id="issue1"class="case-study-frame">
                 <small>ISSUE #1</small>
                 <h2>Assessing Tone is Hard</h2>
                 <p>Recommendation algorithms don't match tone preferences well. Listeners were disappointed when recommendations were too casual or too formal and are frustrated that they <strong>only realized after they started listening </strong>to the podcast. </p>
                 <div class="quote-box">
-                    <h2>“Sometimes, even in the same genre, the content varies a lot... <br>   I don't want to hear two people shoot the shit.”</h2>
+                    <h2>“Even in the same genre, the content varies a lot...   I don't want to hear two people shoot the shit.”</h2>
                     <small>LEON, 38</small>
                 </div>
             </div>
             <div class="case-study-frame-2">
                 <div>
                     <small>LANDSCAPE ANALYSIS</small>
-                    <h2>Snippets and Transcripts</h2>
-                    <p>Current streaming platforms only offer two ways to assess podcast tone: through listening to a snippet or reading a transcript, both of which are time-consuming. </p>
+                    <h2>Only Snippets and Transcripts</h2>
+                    <p>Tone is conveyed on streaming platforms through listening to a snippet or reading a transcript, both of which are time-consuming. </p>
                 </div>
                     <img src="img/landscape.png" alt="screenshots of Amazon Music, Spotify, and Apple Podcast's discovery screens showing the ability to listen to snippets of audio and read descriptions">
             </div>
@@ -123,26 +124,25 @@
                 <p>The most straightforward tone indicators are the pills at the bottom of the text that highlight the podcast style. The card background will generate a visualization that abstractly represents the podcast tone. Lastly, we kept the sound bite, as it remains one of the best ways a listener can sample the podcast. </p>
                 <img src="img/cards.png" alt="this is a placeholder for the actual image for now">
             </div>
-            <hr>
             <div id="issue2" class="case-study-frame-2">
                 <div>
                     <small>ISSUE #2</small>
                     <h2>Key Info is Missing</h2>
-                    <p>During our user interviews, we identified key factors listeners use to assess new podcasts that could be improved in the podcast discovery experience: topic, tone, content, and reviews.</p>
-                    <p>Using card-sorting, I determined which factors are most helpful in assessing a new podcast and which to prioritize. We learned users are especially curious to learn why the podcast is being recommended, so we added it to our list of assessment factors. </p>
+                    <p>There are 3 key factors listeners use to assess new podcasts that could be improved in the podcast discovery experience: tone, content, and reviews.</p>
+                    <p>I priortized factors using a card sorting test. We learned users also want to know why the podcast is being recommended. </p>
                 </div>
                     <div>
                         <div class="frame-2">
                             <h3>Tone is Difficult to Assess</h3>
-                            <p>As discussed in issue #1, tone analysis is only available using snippets and transcripts. Tone summaries would reduce user burden.</p>
+                            <p>Tone analysis is only available using snippets and transcripts. Tone summaries would reduce user burden.</p>
                         </div>
                         <div class="frame-2">
                             <h3>Summaries Lack Quality Control</h3>
-                            <p>There needs to be quality control for episode summaries written by podcast creators, impacting length and relevance to new listeners. AI can use podcast transcripts to refine summaries.</p>
+                            <p>Creator written episode summaries lack quality control, impacting length and relevance to new listeners. AI can use podcast transcripts to refine summaries.</p>
                         </div>
                         <div class="frame-2">
                             <h3>Reviews Don't Exist</h3>
-                            <p>Few podcast streaming platforms incorporate reviews into their features. AI can gather reviews from various sources to provide a glimpse into what others think about the podcast.</p>
+                            <p>Only Apple incorporates user podcast reviews into their platform. AI can gather reviews from various sources to provide a glimpse into what others think about the podcast.</p>
                         </div>
                         <div class="frame-2">
                             <h3>No Transparency</h3>
@@ -152,97 +152,68 @@
             </div>
             <div class="case-study-frame">
                 <small>SOLUTION</small>
-                <h2>AI Extracts Pertinent Podcast Information</h2>
-                <p>The current flow requires users to click into podcast shows to access show information. We bring relevant and personalized AI-generated podcast information out from the podcast show page into the explore page.</p>
+                <h2>AI Extracts Pertinent Information</h2>
+                <p>The current flow requires users to click into podcast shows to access show information. The new design brings <strong> relevant and personalized AI-generated podcast information out</strong> from the podcast show page into the explore page.</p>
                 <img src="img/basically.png" alt="this is a placeholder for the actual image for now">
             </div>
-            <div class="case-study-frame-2 bottom-case-study-frame">
+            <div class="case-study-frame-2-bottom">
                 <div>
                     <small>DESIGN</small>
                     <h2>A Card Carousel Accommodates Relevant Information </h2>
-                    <p>Implementing a carousel allows users to access more information quickly if they're interested and skip past podcasts if they're not. I used paper prototype testing to arrive at the final card layout. </p>
+                    <p>A carousel allows users to access more information quickly if they're interested and skip past podcasts if they're not. I used paper prototype testing to arrive at the final card layout. </p>
                 </div>
                 <div><img src="img/cards.png" alt="this is a placeholder for the actual image for now">
                 </div>
             </div>
-            <hr>
             <div class="case-study-frame">
                 <small>TESTING</small>
                 <h2>Ramp Up the Personalization </h2>
-                <p>I conducted 3 user tests and found that participants wanted more obvious indicators that the AI selects and writes based on users’ preferences. We rewrote the headers to emphasize that recommendations and summaries are personalized. </p>
+                <p>Users wanted stronger indicators AI is personalizing content to their preferences.</p>
                 <img src="img/cards.png" alt="this is a placeholder for the actual image for now">
             </div>
             <div class="case-study-frame">
                 <small>FINAL PROTOTYPE</small>
                 <h2>Presenting Podcast Picks</h2>
+                <p>The final UI and clickable prototype is made by my partner, Meng.</p>
                 <div class="case-study-2-frames">
-                    <div class="frame-2">
-                        <div class="detail-title">
-                            <small>Issue #1</small>
-                            <h3>Assessing tone is hard</h3>
-                        </div>
-                        <div class="detail-info">
-                            Recommended podcasts fail to match listeners' preferred podcast style, forcing them to skim transcripts or listen to clips to grasp the content style.
-                        </div>
+                    <div class="frame-phone-video">
+                        <iframe style="margin-left:-5px;margin-top:-5px"; width="300" height="600" src=img/podcastpicks.mp4 frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <div class="frame-2">
-                        <div class="detail-title">
-                            <small>Issue #2</small>
-                            <h3>Key Info is Missing</h3>
-                        </div>
-                        <div class="detail-info">
-                            Critical details are buried in the podcast show page, making it difficult for listeners to assess many podcasts quickly and effectively.
-                        </div>
+                    <div class="qr-block">
+                        <div id="qr-prototype">
+                            <a href="https://tinyurl.com/Amazonpodcastpicks" target="blank" class="button"><img  src="img/qr.png" alt="qr-code to access the clickable prototype created in Figma. Also, accessible through url: https://tinyurl.com/Amazonpodcastpicks. ">
+                            </a>
+                            <p>Scan or click for the prototype!</p>
+                            </div>
                     </div>
                 </div>
             </div>
             <div class="bottom-case-study-frame">
                 <small>FUTURE CONSIDERATIONS</small>
-                <h2>Podcast Picks in New Contexts</h2>
-                <p>For the design challenge, our scope was limited to the listener's experience. Given more time, Meng and I would have loved to explore how creators would respond to AI representing them and how the design translates across different devices.
+                <h2>Creators Deserve a Say in Podcast Picks</h2>
+                <p>In the challenge, our scope was limited to the listener's experience. Given more time, Meng and I would have explored how creators would respond to AI representing them. We would explore creator tools to review and refine AI-generated descriptions.
                 </p>
-                <div class="case-study-2-frames">
-                    <div class="frame-2">
-                        <div class="detail-title">
-                            <h3>Creator Control</h3>
-                        </div>
-                        <div class="detail-info">
-                            How will creators feel about AI-generated summaries and tone analysis? We would explore tools for podcast creators to review and refine Podcast Picks AI-generated descriptions.
-                        </div>
-                    </div>
-                    <div class="frame-2">
-                        <div class="detail-title">
-                            <h3>Different Devices</h3>
-                        </div>
-                        <div class="detail-info">
-                            How would Podcast Picks look on the Amazon Music web player? How would it integrate with the Amazon Echo and Alexa voice?
-                        </div>
-                    </div>
-                </div>
             </div>
-            <hr>
-            <div class="bottom-case-study-frame">
+            <div class="case-study-frame">
                 <small>REFLECTIONS</small>
                 <h2>Lessons in Moving Foward</h2>
-                <p>As a part of a design challenge, Meng and I only had 4 weeks to complete the entire project from prompt to presentation. With our short time frame in mind, we outlined milestones for each phase of our projects. Inevitably, our design process wasn't linear but we were always able to move forward with each conversation.
+                <p>With only 4 weeks to complete the design challenge from prompt to presentation, we outlined each phase of the project. Inevitably, our design process wasn't linear but we were always able to move forward with each conversation.
                 </p>
                 <div class="case-study-2-frames">
                     <div class="frame-2">
                         <div class="detail-title">
-                            <small>Lesson #1</small>
                             <h3>Getting Unstuck</h3>
                         </div>
                         <div class="detail-info">
-                            Our mentor helped us reframe when we got stuck by reminding us of the bigger picture. I learned to refer back to a Northstar to guide our decisions when the team is stuck. 
+                            Our mentor helped us reframe when we got stuck by reminding us of the bigger picture. I learned to refer back to a Northstar to guide our decisions when stuck. 
                         </div>
                     </div>
                     <div class="frame-2">
                         <div class="detail-title">
-                            <small>Lesson #2</small>
                             <h3>Prepardness Pays</h3>
                         </div>
                         <div class="detail-info">
-                            Coming to each mentor meeting with clear objectives, questions to ask, and a concise summary of each week's progress allowed us to make the most of our mentor's time. 
+                            Coming to each mentor meeting with objectives, questions, and a summary of each week's progress allowed us to make the most of our mentor's time. 
                         </div>
                     </div>
                 </div>

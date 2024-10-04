@@ -73,6 +73,7 @@ nav{
 }
 .bottom-case-study-frame{
     padding:100px 120px 100px 120px;
+    border-bottom:1px var(--white) solid;
 }
 .case-study-frame-2{
     padding:100px 120px 0px 120px;
@@ -80,6 +81,14 @@ nav{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+}
+.case-study-frame-2-bottom{
+    padding:100px 120px 100px 120px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    border-bottom:1px var(--white) solid;
 }
  /*styling case study sub 2 grid sub boxes*/
  .case-study-2-frames{
@@ -101,8 +110,62 @@ nav{
     background-color: var(--accent-black);
  }
 
+ /*framing video*/
+ .frame-phone-video{
+    display: block; 
+    width:286px; 
+    height:500; 
+    border-radius: 44px;
+    overflow: hidden;
+    position:relative;
+    left:20%;
+ }
+
+ /*QR-code*/
+ .qr-block{
+    display:inline-block;
+    height: 100%;
+}
+#qr-prototype{
+    position: relative;
+    top: 50%;
+    left:30%;
+    transform: translateY(-50%);
+}
+.button:hover{
+    opacity:75%;
+    transition: opacity ease 0.3s;
+}
+@media screen and (max-width: 1000px){
+    /*framing video*/
+    .frame-phone-video{
+        display: block; 
+        width:286px; 
+        height:500; 
+        border-radius: 44px;
+        overflow: hidden;
+        position:relative;
+        margin:auto;
+        left:0%;
+    }
+
+    /*QR-code*/
+    .qr-block{
+        display:inline-block;
+        padding-top:40px;
+        margin:auto;
+        height: 100%;
+    }
+    #qr-prototype{
+        position: relative;
+        top: 50%;
+        left:0%;
+        transform: translateY(-50%);
+    }
+}
+
     /*this collapses everything to one column at 768px*/
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
         /*styling case study frames*/
         .case-study-frame, .bottom-case-study-frame, .casestudy-intro{
             padding:40px 0px 40px 0px;
@@ -115,6 +178,11 @@ nav{
             gap: 0px;
         }
         .case-study-2-frames{
+            grid-template-columns: repeat(1, 1fr);
+            gap: 0px;
+        }
+        .case-study-frame-2-bottom{
+            padding:40px 0px 40px 0px;
             grid-template-columns: repeat(1, 1fr);
             gap: 0px;
         }
