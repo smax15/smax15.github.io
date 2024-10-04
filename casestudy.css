@@ -110,6 +110,14 @@ nav{
     background-color: var(--accent-black);
  }
 
+ /*styling images*/
+ .large-image{
+    position:relative;
+    margin:auto;
+    width:80%;
+    padding:40px 20px 0px 20px;
+ }
+
  /*framing video*/
  .frame-phone-video{
     display: block; 
