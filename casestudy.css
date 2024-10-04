@@ -210,6 +210,10 @@ blockquote{
 
     /*this collapses everything to one column at 768px*/
     @media screen and (max-width: 900px) {
+        /*styling intro*/
+        .casestudy-intro{
+            border: 1px rgba(255, 0, 0, 0) solid;
+        }
         /*styling case study frames*/
         .case-study-frame, .bottom-case-study-frame, .casestudy-intro{
             padding:40px 0px 40px 0px;
