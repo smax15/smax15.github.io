@@ -7,10 +7,25 @@
     width:100%;
     color: var(--white);
 }
+a{
+    color:var(--white);
+}
 
 /*custom background*/
 #amazontitle{
     background-image: url("img/amazoncover.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+#mcdonaldstitle{
+    background-image: url("img/mcdonaldstitle.png");
+    background-size: 100%;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+#canseratitle{
+    background-image: url("img/cansera.png");
+    background-size: 100%;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
 }

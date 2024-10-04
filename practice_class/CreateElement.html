@@ -1,0 +1,30 @@
+<html lang ="en">
+    <head>
+        <title>createElement() Example</title>
+    </head>
+    <body>
+        <h1>Adding Elements with createElement()</h1>
+        <div id="container"></div>
+        <button onclick="addParagraph()">Add Paragraph</button>
+    </body>
+    
+    <script>
+        function addParagraph(){
+            //Create a new paragraph Element
+            const newParagraph = document.createElement('p');
+
+            //Set its text content
+            newParagraph.textContent = 'This is a new paragraph created with JavaScript';
+
+            //Optionally, add some styling
+            newParagraph.style.color = 'blue';
+            newParagraph.style.fontStyle = 'italic';
+
+            //Get the container element
+            const container = document.getElementById('container');
+
+            //append the new paragraph
+            container.appendChild(newParagraph);
+        }
+    </script>
+</html>

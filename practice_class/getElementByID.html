@@ -1,0 +1,25 @@
+<html lange = "en">
+    <head>
+        <title>Get Elemnt ByID example</title>
+        <style>
+            #blueButton{
+                background-color: blue;
+                color:white;
+            }
+            #redButton{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="para">Some Text here</p>
+        <button id="blueButton" onclick="changeColor('blue');">Blue</button>
+        <button id="redButton" onclick="changeColor('red');">Red</button>
+    </body>
+    <script>
+        function changeColor(newColor){
+            const elem= document.getElementById("para");
+            elem.style.color=newColor;
+        }
+    </script>
+</html>

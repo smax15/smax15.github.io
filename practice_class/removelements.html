@@ -1,0 +1,24 @@
+<html lang="en">
+    <head>
+        <title>
+            Remove Element Example
+        </title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="title">Hello, World!</h1>
+            <p id="description">This is a simple example of removing an element using JavaScript.</p>
+            <button onclick="removeElement('title')">Remove Title</button>
+            <button onclick="removeElement('description')">Remove Description</button>
+        </div>
+
+    </body>
+    <script>
+        function removeElement(elementId){
+            var element = document.getElementById(elementId);
+            if(element){
+                element.remove();
+            }
+        }
+    </script>
+    </html>

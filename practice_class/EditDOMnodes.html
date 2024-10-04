@@ -1,0 +1,23 @@
+<html lange = "en">
+    <head>
+        <title>Edit DOM Nodes</title>
+    </head>
+    <body>
+        <ul>
+            <li>
+                list item one
+            </li>
+            <li>
+                list item two
+            </li>
+            <li>
+                list item There
+            </li>
+        </ul>
+    </body>
+    <script>
+        let listItems = document.querySelectorAll('li'); //returns a nodelist
+        listItems[0].style.color = "red";
+        listItems[2].textContent = "changed";
+    </script>
+</html>

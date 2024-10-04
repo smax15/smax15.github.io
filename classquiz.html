@@ -1,0 +1,134 @@
+<html en="lang">
+    <head>
+        <title>Ocean Conservation</title>
+        <style>
+            body{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            h1{
+                font-size:large;
+                color: hsl(239, 51%, 37%)
+            }
+            ul{
+                list-style-type: none;
+            }
+            #container{
+                width:1000px;
+                margin:auto;
+            }
+            button{
+                margin-top:10px;
+            }
+            #habitList li{
+                margin-left:-44px;
+                padding-top:.4em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+        <div id="quiz-container">
+            <h1>Ocean Conservation Quiz</h1>
+            <div id="quiz"></div>
+            <button id="submit">Submit Quiz</button>
+            <div id="result"></div>
+        </div>
+
+        <div id="checklist">
+            <h1>My Daily Habits to Save the Oceans</h1>
+        
+            <ul id="habitList">
+                <li><input type="checkbox" onchange="toggleFinished(this)">Conserve water</li>
+                <li><input type="checkbox" onchange="toggleFinished(this)">Use nontoxic chemicals</li>
+                <li><input type="checkbox" onchange="toggleFinished(this)">Cut down what you throw away</li>
+                <li><input type="checkbox" onchange="toggleFinished(this)">Shop wisely (choose sustainable seafood)</li>
+                <li><input type="checkbox" onchange="toggleFinished(this)">Buy less plastic</li>
+            </ul>
+        </div>
+    </div>
+
+        <script>
+            //Checklist
+            const habitList = document.getElementById('habitList');
+            const newItemInput = document.getElementById('newItem');
+
+            function toggleFinished(checkbox) {
+                const listItem = checkbox.parentElement;
+                listHabit.classList.toggle('finished');
+            }
+
+
+            //Quiz
+            const quizData = [
+            {
+                question: "How much water is in the ocean?",
+                type: "single",
+                options: ["50%", "88%", "97%", "99%"],
+                correct: ["97%"]
+            },
+            {
+                question: "What is the largest living structure on Earth?",
+                type: "single",
+                options: ["The Great Barrier Reef", "The Amazon Rainforest", "The Nile River", "Sequioa National Forest"],
+                correct: ["The Great Barrier Reef"]
+            },
+            {
+                question: "What ocean basin has the most corals?",
+                type: "single",
+                options: ["Atlantic", "Pacific", "Southern", "Indian"],
+                correct: ["Pacific"]
+            },
+            {
+                question: "What threats do seabirds face?",
+                type: "multiple",
+                options: ["Oil Spills", "Contaminants", "Bird Flu", "Habitat Destruction"],
+                correct: ["Oil Spills", "Contaminants", "Habitat Destruction"]
+            },
+            {
+                question: "What is ocean acidifaction?",
+                type: "multiple",
+                options: ["A reduction in the pH of the ocean", "The rising of sea levels","A result of uptake of carbon dioxide (CO2) from the atmosphere", "A process that corrodes coral reefs"],
+                correct: ["A reduction in the pH of the ocean", "A result of uptake of carbon dioxide (CO2) from the atmosphere", "A process that corrodes coral reefs"]
+            }
+        ];
+
+        function createQuiz() {
+            const quizElement = document.getElementById("quiz");
+            quizData.forEach((q, index) => {
+                const questionElement = document.createElement("div");
+                questionElement.classList.add("question");
+                questionElement.innerHTML = `
+                    <h3>${index + 1}. ${q.question}</h3>
+                    <div class="options">
+                        ${q.options.map(option => `
+                            <label class="option">
+                                <input type="${q.type === 'single' ? 'radio' : 'checkbox'}" 
+                                       name="q${index}" 
+                                       value="${option}">
+                                ${option}
+                            </label>
+                        `).join("")}
+                    </div>
+                `;
+                quizElement.appendChild(questionElement);
+            });
+        }
+
+        function submitQuiz() {
+            let score = 0;
+            quizData.forEach((q, index) => {
+                const selectedOptions = Array.from(document.querySelectorAll(`input[name="q${index}"]:checked`))
+                    .map(input => input.value);
+                if (JSON.stringify(selectedOptions.sort()) === JSON.stringify(q.correct.sort())) {
+                    score++;
+                }
+            });
+            const resultElement = document.getElementById("result");
+            resultElement.textContent = `You scored ${score} out of ${quizData.length}`;
+        }
+
+        createQuiz();
+        document.getElementById("submit").addEventListener("click", submitQuiz);
+        </script>
+    </body>
+    </html>
