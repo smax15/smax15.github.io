@@ -70,6 +70,7 @@ iframe {
         margin:auto;
     }
     .image-item img{
-        opacity:0%;
+        object-fit: cover;
+        height:auto;
     }
   }

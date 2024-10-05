@@ -222,9 +222,6 @@ img {
 .frame4:nth-child(4){
     transition-delay:400mx;
 }
-.right-image:nth-child(1){
-    transition-delay:200mx;
-}
 
   /* COLORS */
   :root{
