@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US" >
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="global-stylesheet.css">
@@ -11,78 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sara Ma - McDonald's Chat Agent</title>
+    <meta property="og:site_name" content="Sara Ma"/>
+    <meta property="og:title" content="Sara Ma &mdash; Building a digital mobile cashier that delivers service with a smile"/>
+    <meta property="og:url" content="https://smax15.github.io/amazon.html"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://smax15.github.io/img/mcdonalds.png"/>
+    <meta property="og:image:width" content="500"/>
+    <meta property="og:image:height" content="400"/>
+    <title>Sara Ma - McDonald's Conversational UX</title>
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
-    <style>
-         <style>
-        
-        #portfolio-image-banner {
-            background: url(https://images.squarespace-cdn.com/content/v1/5e6d373128abba1b403505e7/fd863ee3-1a6a-4e0e-b1a3-fbb2548bd1eb/2020_HE_2020_E-4565-659_hero_7.jpeg?format=2500w) no-repeat top center;
-            background-attachment: fixed;
-            background-size: cover cover;
-            background-position: center;
-            font-size: xx-large;
-            color: white;
-            padding: 50px;
-        }
-
-        #portfolio-image-banner a{
-            text-decoration: none;
-            color: whitesmoke;
-        }
-
-        #portfolio-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-        }
-
-        .dot {
-            height: 15px;
-            width: 15px;
-            background-color: #f6addf;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .dot.active {
-            background-color:  #f574cc;
-        }
-
-        #project-display {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #e9e9e9;
-            border-radius: 8px;
-            color: #000000;
-        }
-        #project-display h2{
-            color: #000000;
-        }
-        .project-button {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 10px;
-            padding: 10px;
-            background-color: #00286e;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .project-button:hover {
-            background-color: #0199da;
-        }
-
-        .project-button img {
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-    </style>
+    <script defer src="portfolio.js"></script>
 </head>
 <body>
         <div id="mcdonaldstitle" class="top-container-project">
@@ -93,13 +31,12 @@
                 <a href="#">Resume</a>
             </nav>
             <div class="casestudy-intro">  
-                <div class="casestudy-intro-left">
-                <h4>Conversational chatbot</h4>
+                <div class="casestudy-intro-left hidden-left">
+                    <h4>Conversational chatbot</h4>
                     <h1>McDonalds </h1>
-                    <p>Building a digital mobile cashier that delivers service with a smile.</p>
+                    <p>Building a chat-based cashier that delivers service with a smile.</p>
                 </div>  
             </div>
-           
         </div>
         <div class="project-detail-banner">
             <div class="project-detail-container">
@@ -110,21 +47,23 @@
                         </div>
                 </div>
                 <div class="project-details">
-                        <h4>
-                        TEAM
-                        </h4>
-                        <div class="detail-info">
-                        Pete Wise
-                        <br>Sara Ma
-                        </div>
+                    <h4>
+                    TEAM
+                    </h4>
+                    <div class="detail-info">
+                    Pete Wise
+                    <br>Sara Ma
+                    </div>
                 </div>
                 <div class="project-details">
                         <h4>
-                        SKILLS
+                        My Contributions
                         </h4>
                         <div class="detail-info">
                         User Research
-                        <br>Conversational UX
+                        <br>Conversational Design
+                        <br>Coding & Integrating AI 
+                        <br>User Testing
                         </div>
                 </div>
                 <div class="project-details">
@@ -136,190 +75,190 @@
                         </div>
                 </div>
             </div>
-
         </div>
      <div class="container">         
         <div class="case-study">
             <div class="case-study-frame">
-                <h4>THE OPPORTUNITY</h4>
-                <h2>Enhance the customer ordering experience with a chat-based agent.</h2>
+                <h4>THE CHALLENGE</h4>
+                <h2>Creating Space for Conversation in a Fast-food Restaurant</h2>
+                <p>In fast-food, speed is king, and the opportunity to build connections at the counter gives way to efficiency. In my conversational UX class, my team built a chatbot that creates space for customers to connect with McDonald's brand while ordering. </p>
             </div>
             <div class="bottom-case-study-frame">
-                <small>AGENT CHARACTERISTICS</small>
-                <h2>Extending the Beloved McDonald's Brand</h2>
-                <p>The agent should reflect the beloved McDonald's brand. Using the company brand guidelines and analyzing the existing language used in the McDonald's app, I defined the agent's personality as unpretentious, lighthearted, and approachable. </p>
+                <small>TAKEAWAYS</small>
+                <h2>Learning as I Built</h2>
+                <p>While building my first chat agent, I had to learn new terminology, design process, and software as I built. In the end, my team accomplished more than we thought we could. </p>
                 <div class="case-study-2-frames">
-                    <div class="frame-2">
+                    <div class="frame-4 hidden-up"> <a href="#test_utterances">
                         <div class="detail-title">
-                            <h2>Unpretentious</h2>
+                            <small>Takeaway #1</small>
+                            <h2>Test Utterances Early and Often</h2></a>
                         </div>
-                        <div class="detail-info">
-                            Stay casual but use clear diction. Mcdonald's is loved across cultures, so inclusion is a priority.
-                        </div>
+                        <!--<div class="detail-info">
+                            Critical details are buried in the podcast show page, making it difficult for listeners to assess many podcasts quickly and effectively.
+                        </div>-->
                     </div>
-                    <div class="frame-2">
-                        <div class="detail-title">
-                            <h2>Lighthearted</h2>
+                    <div class="frame-4 hidden-up">
+                        <div class="detail-title"><a href="#issue1">
+                            <small>Takeaway #2</small>
+                            <h2>Double Down on Brand Values</h2></a>
                         </div>
-                        <div class="detail-info">
-                            Use playful language to affirm choices and create positive, memorable interactions with the customer.
-                        </div>
+                        <!--<div class="detail-info">
+                            Recommended podcasts fail to match listeners' preferred podcast style, forcing them to skim transcripts or listen to clips to grasp the content style.
+                        </div>-->
                     </div>
-                    <div class="frame-2">
+                    <div class="frame-4 hidden-up"> <a href="#issue2"></a>
                         <div class="detail-title">
-                            <h2>Approachable</h2>
+                            <small>Takeaway #3</small>
+                            <h2>Don’t Let Technical Limits Overshadow</h2></a>
                         </div>
-                        <div class="detail-info">
-                            Always be ready to help and never judge. Offer suggestions to help guide the customer. 
-                        </div>
+                        <!--<div class="detail-info">
+                            Critical details are buried in the podcast show page, making it difficult for listeners to assess many podcasts quickly and effectively.
+                        </div>-->
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="case-study-frame">
-                <small>ISSUE #1</small>
-                <h2>Assessing Tone is Hard</h2>
-                <p>Recommendation algorithms match podcast topics well but need to catch up on matching tones. Listeners were disappointed when recommendations were too casual or too formal for their preferences and frustrated that they only realized this after they started listening to the podcast. </p>
-                <div class="quote-box">
-                    <h2>"I wish they had better classifications. Sometimes, even in the same genre, the content varies a lot.”</h2>
-                    <small>LEON, 38</small>
+            <div id="test_utterances"class="case-study-frame">
+                <h4>TAKEAWAY #1</h4>
+                <h2>Test Utterances Early and Often</h2>
+                <p>Building a chatbot that feels human requires a rich dataset and a deep understanding of how customers want to interact with it. Test early and often to generate the knowledge and the data.</p>
+                <div class="quote-box hidden-left">
+                    <blockquote>
+                        In the same genre, the content varies a lot...   I don't want to hear two people shoot the shit.
+                        <span>LEON, 38</span>
+                      </blockquote>
                 </div>
             </div>
             <div class="case-study-frame-2">
                 <div>
                     <small>LANDSCAPE ANALYSIS</small>
-                    <h2>Sound Bites and Transcripts</h2>
-                    <p>Looking at the current landscape, podcast streaming platforms only offer two ways to assess podcast tone: through listening to a snippet or reading a transcript, both of which are time-consuming. </p>
+                    <h2>Only Snippets and Transcripts</h2>
+                    <p>Tone is conveyed on streaming platforms through listening to a snippet or reading a transcript, both of which are time-consuming. </p>
                 </div>
+                <div class="hidden-up">
                     <img src="img/landscape.png" alt="screenshots of Amazon Music, Spotify, and Apple Podcast's discovery screens showing the ability to listen to snippets of audio and read descriptions">
-            </div>
+                </div>
+                </div>
             <div class="bottom-case-study-frame">
                 <small>SOLUTION</small>
-                <h2>Multi-pronged Tone Analysis Approach</h2>
-                <p>The most straightforward tone indicators are the pills at the bottom of the text that highlight the podcast style. The card background will generate a visualization that abstractly represents the podcast tone. Lastly, we kept the sound bite, as it remains one of the best ways a listener can sample the podcast. </p>
-                <img src="img/cards.png" alt="this is a placeholder for the actual image for now">
+                <h2>Express Tone through Keywords and Visuals</h2>
+                <div class="case-study-2-frames-images">
+                    <div class="left-image">
+                        <img src="img/tonemockup.gif" style="height:654" alt="the design includes a tone visualization animation in the background, tone summarized as keywords and a sound bite">
+                    </div>
+                    <div class="right-image">
+                        <div class="frame-2 hidden-left">
+                            <h3>1. Visually Set the Vibe</h3>
+                            <p>Background visualizations abstractly represents the podcast tone.</p>
+                        </div>
+                        <div class="frame-2 hidden-left">
+                            <h3>2. Highlight Tone with Key Words</h3>
+                            <p>Straightforward tone indicators at the bottom of the text highlight the podcast style.</p>
+                        </div>
+                        <div class="frame-2 hidden-left">
+                            <h3>3. Keep the Sound Bite</h3>
+                            <p>The sound bite remains one of the best ways a listener can sample the podcast. </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <hr>
-            <div class="case-study-frame-2">
+            <div id="issue2" class="case-study-frame">
                 <div>
                     <small>ISSUE #2</small>
                     <h2>Key Info is Missing</h2>
-                    <p>During our user interviews, we identified key factors listeners use to assess new podcasts that could be improved in the podcast discovery experience: topic, tone, content, and reviews.</p>
-                    <p>Using card-sorting, I determined which factors are most helpful in assessing a new podcast and which to prioritize. We learned users are especially curious to learn why the podcast is being recommended, so we added it to our list of assessment factors. </p>
+                    <p><u>Tone, content, and reviews</u> are 3 key factors listeners use to assess new podcasts that needs to be improved. I learned users also want to know <u>why the podcast is being recommended</u> during card sorting to priortize factors. </p>
                 </div>
-                    <div>
-                        <div class="frame-2">
-                            <h3>Tone is Difficult to Assess</h3>
-                            <p>As discussed in issue #1, tone analysis is only available using snippets and transcripts. Tone summaries would reduce user burden.</p>
+                    <div class="case-study-2-frames">
+                        <div class="frame-4 hidden-up">
+                            <h3>Tone Summaries Reduce User Burden</h3>
+                            <p>Understanding tone is difficult with only using snippets and transcripts.</p>
                         </div>
-                        <div class="frame-2">
-                            <h3>Summaries Lack Quality Control</h3>
-                            <p>There needs to be quality control for episode summaries written by podcast creators, impacting length and relevance to new listeners. AI can use podcast transcripts to refine summaries.</p>
+                        <div class="frame-4 hidden-up">
+                            <h3>AI Personalizes Podcast Summaries</h3>
+                            <p>Creator written episode summaries lack quality control, impacting length and relevance to new listeners.</p>
                         </div>
-                        <div class="frame-2">
-                            <h3>Reviews Don't Exist</h3>
-                            <p>Few podcast streaming platforms incorporate reviews into their features. AI can gather reviews from various sources to provide a glimpse into what others think about the podcast.</p>
+                        <div class="frame-4 hidden-up">
+                            <h3>Summarize Reviews from Outside Sources with AI</h3>
+                            <p>Only Apple has reviews on their podcast platform despite users wanting to read them.</p>
                         </div>
-                        <div class="frame-2">
-                            <h3>No Transparency</h3>
+                        <div class="frame-4 hidden-up">
+                            <h3>Show Why a Pocast is Recommended</h3>
                             <p>Listeners want to understand why specific podcasts are being recommended to them, which isn't being provided now. </p>
                         </div>
                     </div>
             </div>
             <div class="case-study-frame">
                 <small>SOLUTION</small>
-                <h2>AI Extracts Pertinent Podcast Information</h2>
-                <p>The current flow requires users to click into podcast shows to access show information. We bring relevant and personalized AI-generated podcast information out from the podcast show page into the explore page.</p>
-                <img src="img/basically.png" alt="this is a placeholder for the actual image for now">
+                <h2>AI Extracts Pertinent Information</h2>
+                <p>The current flow requires users to click into podcast shows to access show information. The new design brings <u> relevant and personalized AI-generated podcast information out</u> from the podcast show page into the explore page.</p>
+                <div class="large-image hidden-up">
+                    <img src="img/basically.png" alt="the current podcast page only shows images and titles whereas the new podcast discovery will include key information a user normally would need to go to the podcast show page to discover">
+                 </div>
             </div>
-            <div class="case-study-frame bottom-case-study-frame">
+            <div class="bottom-case-study-frame">
                 <div>
                     <small>DESIGN</small>
                     <h2>A Card Carousel Accommodates Relevant Information </h2>
-                    <p>Implementing a carousel allows users to access more information quickly if they're interested and skip past podcasts if they're not. I used paper prototype testing to arrive at the final card layout. </p>
+                    <p>A carousel allows users to access more information quickly if they're interested and skip past podcasts if they're not. I used paper prototype testing to arrive at the final card layout. </p>
                 </div>
-                <div id="project-buttons"></div>
-                <div id="project-display"></div>
-                
+                <div class="large-image hidden-up"><img src="img/cards.png" alt="four cards that can be swipped through in a carousel to show more podcast info">
+                </div>
             </div>
-            <hr>
             <div class="case-study-frame">
                 <small>TESTING</small>
                 <h2>Ramp Up the Personalization </h2>
-                <p>I conducted 3 user tests and found that participants wanted more obvious indicators that the AI selects and writes based on users’ preferences. We rewrote the headers to emphasize that recommendations and summaries are personalized. </p>
-                <img src="img/cards.png" alt="this is a placeholder for the actual image for now">
+                <p>Users wanted clear indicators AI is personalizing content to their preferences.</p>
+                <div class="case-study-2-frames-images">
+                    <div class="left-image hidden-up">
+                        <img src="img/olddesign.png" alt="Previous titles for cards were generic">
+                    </div>
+                    <div class="right-image hidden-up">
+                        <img src="img/newdesign.png" alt="New content for cards is conversational and personalized">
+                    </div>
+                </div>
             </div>
             <div class="case-study-frame">
                 <small>FINAL PROTOTYPE</small>
                 <h2>Presenting Podcast Picks</h2>
+                <p>The final UI and clickable prototype is made by my partner, Meng.</p>
                 <div class="case-study-2-frames">
-                    <div class="frame-2">
-                        <div class="detail-title">
-                            <small>Issue #1</small>
-                            <h3>Assessing tone is hard</h3>
-                        </div>
-                        <div class="detail-info">
-                            Recommended podcasts fail to match listeners' preferred podcast style, forcing them to skim transcripts or listen to clips to grasp the content style.
-                        </div>
+                    <div class="frame-phone-video">
+                        <iframe style="margin-left:-5px;margin-top:-5px"; width="300" height="600" src="img/podcastpicks.mp4" autoplay="1" frameborder="0" allowfullscreen></iframe>
                     </div>
-                    <div class="frame-2">
-                        <div class="detail-title">
-                            <small>Issue #2</small>
-                            <h3>Key Info is Missing</h3>
-                        </div>
-                        <div class="detail-info">
-                            Critical details are buried in the podcast show page, making it difficult for listeners to assess many podcasts quickly and effectively.
-                        </div>
+                    <div class="qr-block hidden-up">
+                        <div id="qr-prototype">
+                            <a href="https://tinyurl.com/Amazonpodcastpicks" target="blank" class="button"><img  src="img/qr.png" alt="qr-code to access the clickable prototype created in Figma. Also, accessible through url: https://tinyurl.com/Amazonpodcastpicks. ">
+                            </a>
+                            <p>Scan or click for the prototype!</p>
+                            </div>
                     </div>
                 </div>
             </div>
             <div class="bottom-case-study-frame">
                 <small>FUTURE CONSIDERATIONS</small>
-                <h2>Podcast Picks in New Contexts</h2>
-                <p>For the design challenge, our scope was limited to the listener's experience. Given more time, Meng and I would have loved to explore how creators would respond to AI representing them and how the design translates across different devices.
+                <h2>Creators Deserve a Say in Podcast Picks</h2>
+                <p>In the challenge, our scope was limited to the listener's experience. Given more time, Meng and I would have explored how creators would respond to AI representing them. We would explore creator tools to review and refine AI-generated descriptions.
                 </p>
-                <div class="case-study-2-frames">
-                    <div class="frame-2">
-                        <div class="detail-title">
-                            <h3>Creator Control</h3>
-                        </div>
-                        <div class="detail-info">
-                            How will creators feel about AI-generated summaries and tone analysis? We would explore tools for podcast creators to review and refine Podcast Picks AI-generated descriptions.
-                        </div>
-                    </div>
-                    <div class="frame-2">
-                        <div class="detail-title">
-                            <h3>Different Devices</h3>
-                        </div>
-                        <div class="detail-info">
-                            How would Podcast Picks look on the Amazon Music web player? How would it integrate with the Amazon Echo and Alexa voice?
-                        </div>
-                    </div>
-                </div>
             </div>
-            <hr>
-            <div class="bottom-case-study-frame">
+            <div class="case-study-frame">
                 <small>REFLECTIONS</small>
                 <h2>Lessons in Moving Foward</h2>
-                <p>As a part of a design challenge, Meng and I only had 4 weeks to complete the entire project from prompt to presentation. With our short time frame in mind, we outlined milestones for each phase of our projects. Inevitably, our design process wasn't linear but we were always able to move forward with each conversation.
+                <p>With only 4 weeks to complete the design challenge from prompt to presentation, we outlined each phase of the project. Inevitably, our design process wasn't linear but we were always able to move forward with each conversation.
                 </p>
                 <div class="case-study-2-frames">
-                    <div class="frame-2">
+                    <div class="frame-2 hidden-up">
                         <div class="detail-title">
-                            <small>Lesson #1</small>
                             <h3>Getting Unstuck</h3>
                         </div>
                         <div class="detail-info">
-                            Our mentor helped us reframe when we got stuck by reminding us of the bigger picture. I learned to refer back to a Northstar to guide our decisions when the team is stuck. 
+                            Our mentor helped us reframe when we got stuck by reminding us of the bigger picture. I learned to refer back to a Northstar to guide our decisions when stuck. 
                         </div>
                     </div>
-                    <div class="frame-2">
+                    <div class="frame-2 hidden-up">
                         <div class="detail-title">
-                            <small>Lesson #2</small>
                             <h3>Prepardness Pays</h3>
                         </div>
                         <div class="detail-info">
-                            Coming to each mentor meeting with clear objectives, questions to ask, and a concise summary of each week's progress allowed us to make the most of our mentor's time. 
+                            Preparing objectives, questions, and a weekly progress summary for meetings allowed us to make the most of our mentor's time. 
                         </div>
                     </div>
                 </div>
@@ -334,6 +273,5 @@
             <a href="">Linkedin</a>
         </p> 
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
