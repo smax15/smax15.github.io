@@ -298,24 +298,6 @@ function checkGrid() {
     function updateDisplay() {
         display.textContent = `${formatTime(minutes)}:${formatTime(seconds)}`;
     }
-
-    /*function startStop() {
-            if (isRunning) {
-                clearInterval(timer);
-                //startStopButton.textContent = 'Start';
-            } else {
-                timer = setInterval(() => {
-                    seconds++;
-                    if (seconds === 60) {
-                        seconds = 0;
-                        minutes++;
-                    }
-                    updateDisplay();
-                }, 1000);
-                //startStopButton.textContent = 'Stop';
-            }
-            isRunning = !isRunning;
-        }*/
     function startTimer(){
         timer = setInterval(() => {
             seconds++;
@@ -339,9 +321,6 @@ function checkGrid() {
         minutes = 0;
         updateDisplay();
     }
-
-        //startStopButton.addEventListener('click', startStop);
-       // resetButton.addEventListener('click', reset);
 
 //Instructions
 function instructions() {

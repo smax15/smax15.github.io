@@ -98,6 +98,12 @@ nav{
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
  }
+ .case-study-3-frames{
+    margin-top:50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+ }
  .frame-2{
     background-color: var(--accent-black);
     padding:30px;
@@ -165,7 +171,7 @@ blockquote{
  /*framing video*/
  .frame-phone-video{
     display: block; 
-    width:286px; 
+    width:275px; 
     height:500; 
     border-radius: 44px;
     overflow: hidden;
@@ -188,6 +194,56 @@ blockquote{
     opacity:75%;
     transition: opacity ease 0.3s;
 }
+
+/*CREATING SPEECH BUBBLES*/
+
+.speech-bubble-left, .speech-bubble-right{
+	position: relative;
+	border-radius: .4em;
+    width: fit-content;
+    margin:20px;
+}
+.speech-bubble-left{
+	background: var(--accent-black);
+}
+.speech-bubble-right{
+	background: var(--white);
+    color:var(--background-black);
+}
+
+.speech-bubble-left:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: var(--accent-black);
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: 0px;
+	margin-bottom: -20px;
+}
+
+.speech-bubble-right:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 10%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: var(--white);
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: 0px;
+	margin-bottom: -20px;
+}
+.speech-bubble-content{
+    padding:10px;
+}
+
 @media screen and (max-width: 1000px){
     /*framing video*/
     .frame-phone-video{
@@ -237,7 +293,7 @@ blockquote{
             grid-template-columns: repeat(1, 1fr);
             gap: 0px;
         }
-        .case-study-2-frames{
+        .case-study-2-frames, .case-study-3-frames{
             grid-template-columns: repeat(1, 1fr);
             gap: 0px;
         }
