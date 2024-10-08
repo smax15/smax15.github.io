@@ -21,7 +21,7 @@ a{
 #mcdonaldstitle{
     background-image: url("img/mcdonaldstitle.png");
     background-size: 100%;
-    background-position: center; /* Center the image */
+    background-position: right 35% bottom 15%; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 #canseratitle{
@@ -196,21 +196,25 @@ blockquote{
 }
 
 /*CREATING SPEECH BUBBLES*/
-
+.message-frame{
+    width:400px;
+}
 .speech-bubble-left, .speech-bubble-right{
 	position: relative;
 	border-radius: .4em;
     width: fit-content;
-    margin:20px;
+    margin-bottom:20px;
 }
 .speech-bubble-left{
 	background: var(--accent-black);
+    left:0px;
 }
 .speech-bubble-right{
 	background: var(--white);
     color:var(--background-black);
+    left:20%;
+    transition-delay: .8s;
 }
-
 .speech-bubble-left:after {
 	content: '';
 	position: absolute;
@@ -236,8 +240,8 @@ blockquote{
 	border: 20px solid transparent;
 	border-top-color: var(--white);
 	border-bottom: 0;
-	border-left: 0;
-	margin-left: 0px;
+	border-right: 0;
+	margin-right: 0px;
 	margin-bottom: -20px;
 }
 .speech-bubble-content{
@@ -271,20 +275,53 @@ blockquote{
         transform: translateY(-50%);
     }
 }
-
-    /*this collapses everything to one column at 768px*/
-    @media screen and (max-width: 900px) {
-        /*styling intro*/
-        .casestudy-intro-left{
+     /*this collapses everything to one column at 990px*/
+     @media screen and (max-width: 975px) {
+         /*styling intro*/
+         .casestudy-intro-left{
             padding-bottom:10px;
         }
+        /*project details*/
+        .project-detail-container{
+            width:100%;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+        }
+        .project-details{
+            width:80%;
+        }
+        .project-detail-banner{
+            margin-bottom:40px;
+        }
+        nav{
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .casestudy-intro{
+            padding:0px 20px 0px 20px;
+        }
+        .casestudy-intro-left{
+            width:85%;
+        }
+         /*title background photos*/
+         #amazontitle{
+            background-image:  linear-gradient( hsl(184, 67%, 55%), hsl(235, 100%, 73%) );
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+        }
+        #mcdonaldstitle{
+            background-image:  linear-gradient( #722337, #9A3344,#A93946,#D26B33, #DA9E48 );
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+        }
+     }
+
+    /*this collapses everything to one column at 900px*/
+    @media screen and (max-width: 950px) {
         /*styling case study frames*/
         .case-study-frame, .bottom-case-study-frame{
             padding:0px 0px 40px 0px;
             margin-bottom:40px;
-        }
-        .casestudy-intro{
-            padding:0px 0px 40px 0px;
         }
         .case-study-frame-2{
             padding:0px 0px 40px 0px;
@@ -306,33 +343,7 @@ blockquote{
         .frame-4{
             margin-bottom: 20px;
         }
-        /*project details*/
-        .project-detail-container{
-            width:100%;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 5px;
-        }
-        .project-details{
-            width:80%;
-        }
-        .project-detail-banner{
-            margin-bottom:40px;
-        }
-        #amazontitle{
-            background-image:  linear-gradient( hsl(184, 67%, 55%), hsl(235, 100%, 73%) );
-            background-position: center; /* Center the image */
-            background-repeat: no-repeat; /* Do not repeat the image */
-        }
-        nav{
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .casestudy-intro{
-            padding:0px 20px 0px 20px;
-        }
-        .casestudy-intro-left{
-            width:85%;
-        }
+        
 
         .image-grid {
             display: grid;

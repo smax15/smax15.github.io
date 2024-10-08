@@ -199,12 +199,6 @@ img {
     transform:translateX(-50%);
     transition: all 1.3s;
 }
-.message-right{
-    opacity: 0;
-    filter: blur(5px);
-    transform:scaleX(20%);
-    transition: all 1.3s;
-}
 .hidden-up{
     opacity: 0;
     filter: blur(5px);
@@ -224,7 +218,7 @@ img {
 .hidden-message{
     opacity: 0;
     transition: all 1.3s;
-    transition-delay: .3s;
+    transition-delay: .5s;
 }
 
 .show-message{
@@ -242,6 +236,15 @@ img {
     transition-delay:400mx;
 }
 
+.frame2:nth-child(2){
+    transition-delay:200mx;
+}
+.frame2:nth-child(3){
+    transition-delay:300mx;
+}
+.frame2:nth-child(4){
+    transition-delay:400mx;
+}
   /* COLORS */
   :root{
     --white: hsl(0, 0%, 95%);
