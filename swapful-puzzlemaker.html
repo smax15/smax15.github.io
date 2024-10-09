@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Swapful Admin</title>
+        <style>
+            .container{
+                width:1000px;
+                margin: auto;
+            }
+            .form-container{
+                float:left;
+                /* Form outline */
+                padding: 1em;
+                border: 1px solid #ccc;
+                border-radius: 1em;
+                }
+            label {
+                /* Uniform size & alignment */
+                display: inline-block;
+                min-width: 90px;
+                }
+            input {
+                /* To make sure that all text fields have the same font settings
+                By default, textareas have a monospace font */
+                font: 1em sans-serif;
+                /* Uniform text field size */
+                width: 150px;
+                box-sizing: border-box;
+                /* Match form field borders */
+                border: 1px solid #999;
+                margin-bottom:10px;
+                background-color: #f3f3f3;
+                }
+            button{
+                    width:fit-content;
+                    padding:10px;
+                    margin-left:94px;
+                }
+            .output{
+                display:inline-block;
+                    /* Form outline */
+                padding: 1em;
+                border: 1px solid #ccc;
+                border-radius: 1em;
+                margin-left:10px;
+                }
+            .outputvalues{
+                    padding: 1em;
+                    border: 1px solid #ccc;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-container">
+            <form>
+                <h2>Swapful Puzzle Maker</h2>
+                <label for ="puzzleTheme">Theme:</label>
+                <input type ="text" id="puzzleTheme" name="puzzleTheme"><br>
+                <h2>Puzzle Answers</h2>
+                <label for ="word1">Word 1:</label>
+                <input type ="text" id="word1" name="word1"><br>
+                <label for ="word2">Word 2:</label>
+                <input type ="text" id="word2" name="word2"><br>
+                <label for ="word3">Word 3:</label>
+                <input type ="text" id="word3" name="word3"><br>
+                <label for ="word4">Word 4:</label>
+                <input type ="text" id="word4" name="word4"><br>
+                <h2>Puzzle Metadata</h2>
+                <label for ="puzzleDate">Puzzle Date:</label>
+                <input type ="text" id="puzzleDate" name="puzzleDate"><br>
+                <label for ="puzzleMaker">Name:</label>
+                <input type ="text" id="puzzleMaker" name="puzzleMaker"><br>
+            </form>
+                 <button id="submit">Submit</button>
+            </div>
+            <div class="output">
+                <h2>Swapful Puzzle Outputs</h2>
+                <h3>Theme parsed:</h3>
+                <div id="themeParsed" class="outputvalues"></div>
+                <h3>Letter buttons:</h3>
+                <div id="lettersParsed" class="outputvalues"></div>
+                <h3>Correct words:</h3>
+                <div id="correctWords" class="outputvalues"></div>
+                <h3>Possible Non-themed words:</h3>
+                <div id="ValidWords" class="outputvalues"></div>
+            </div>
+        </div>
+<script>
+    //validate date
+    function isValidDate(dateString) {
+        const dateCheck = new Date(dateString);
+        if(!isNaN(dateCheck.getTime())==false){
+            return false;
+            console.error(dateString + " is not a real date");
+        }else{
+            return true;
+            console.log(dateCheck);
+        }
+        }
+    //validate four letters
+    function validateFourLetters(word){
+        if (word.length==4){
+            return true;
+        }
+        else{ return false;
+        }
+    }
+
+
+
+    //parse theme into letters
+    function parseWord(word,parsed){
+        parsed = word.split('').join(',');
+        return parsed;
+    }
+    //store correct words
+    function storeWord(answer,array){
+    }
+
+    function submit() {
+        var date = document.getElementById('puzzleDate').value;
+        var realDate = isValidDate(date);
+        if (realDate ==false){
+            console.error(date + " is not a real date");
+        }else{
+        
+        //parsetheme
+        //app should get the theme word and then parse the letters
+        //this is on the mobile web page
+        //theme is stored as full word 
+        var thisTheme = document.getElementById("puzzleTheme").value;
+        const theme=[];
+        const parsedTheme = parseWord(thisTheme,theme);
+        const thisdiv = document.getElementById('themeParsed');
+        thisdiv.textContent=parsedTheme;
+
+        //store correct answers
+        const correctAnswer=[];
+        const word=[];
+        for (let i=1;i<5;i++){
+            let divID= "word"+i;
+            var correctWord= document.getElementById(divID).value;
+            var ifFourLetters=validateFourLetters(correctWord);
+            if (ifFourLetters==true){
+            //parse word
+            const parsedWord = parseWord(correctWord,word);
+            word.push(parsedWord);
+            //store correct word into array 
+            correctAnswer.push(correctWord);
+            }
+            else{ console.log( correctWord+" is not four letters")};
+        }
+
+        const correctdiv =document.getElementById('correctWords');
+        correctdiv.textContent=correctAnswer;
+        const letterDiv = document.getElementById('lettersParsed');
+        letterDiv.textContent=word;
+        return word;
+        return correctAnswer;
+        }
+    }
+
+    document.getElementById("submit").addEventListener("click", submit);
+</script>
+</body>
+</html>

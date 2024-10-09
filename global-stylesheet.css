@@ -16,7 +16,7 @@ body {
 .work-container{
     background-color: var(--white);
     padding:32px;
-    margin-top:0px;
+    margin-top:75px;
     border-radius: 30px;
     box-shadow: 0px 10px 25px 10px hsla(0,0%,0%,0.10);
 }
@@ -28,7 +28,7 @@ a{
 .intro-half{
     display:flex;
     justify-content: space-between;
-    margin:75px 0px 75px 0px;
+    margin:75px 0px 0px 0px;
 }
 .intro-container1{
     width:66%;
@@ -217,7 +217,7 @@ img {
 
 .hidden-message{
     opacity: 0;
-    transition: all 1.3s;
+    transition: all 1.5s;
     transition-delay: .5s;
 }
 
@@ -236,19 +236,11 @@ img {
     transition-delay:400mx;
 }
 
-.frame2:nth-child(2){
-    transition-delay:200mx;
-}
-.frame2:nth-child(3){
-    transition-delay:300mx;
-}
-.frame2:nth-child(4){
-    transition-delay:400mx;
-}
   /* COLORS */
   :root{
-    --white: hsl(0, 0%, 95%);
-    --background-black: #14191a;
+    --white: #f2f2f2;
+    --accent-white: #eaeaea;
+    --background-black: hsl(190, 13%, 9%);
     --accent-black: hsl(189, 8%, 17%);
     --accent:hsl(129, 39%, 29%);
  }
