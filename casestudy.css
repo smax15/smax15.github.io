@@ -178,6 +178,50 @@ blockquote{
     position:relative;
     left:20%;
  }
+ .frame-voiceflow-video{
+    display: block; 
+    width:760px; 
+    height:500px; 
+    border-radius: 8px;
+    overflow: hidden;
+    position:relative;
+    left:10%;
+    background-color: var(--background-black);
+ }
+ .voiceflow-video{
+    position:absolute;
+    top:-180px;
+    left:-120px;
+    opacity:50%;
+    transition: opacity ease 0.3s;
+ }
+ .playbutton{
+    width: 74px;
+    height: 74px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--white);
+    box-sizing: border-box;
+    border-width: 37px 0px 37px 74px;
+    position:relative;
+    left:450px;
+    top:300px;
+    z-index: 1;
+    transition: opacity ease 0.3s;
+    transition: border-color ease 0.1s;
+ }
+ .playbutton:hover{
+    border-color: transparent transparent transparent var(--accent-white);
+    transition: border-color ease 0.1s;
+ }
+ .playbutton-hidden{
+    opacity:0%;
+    transition: opacity ease 0.3s;
+ }
+ 
+ .play{
+    opacity:100%;
+    transition: opacity ease 0.3s;
+ }
 
  /*QR-code*/
 .qr-block{

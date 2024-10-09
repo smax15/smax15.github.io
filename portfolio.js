@@ -1,3 +1,5 @@
+/*ANIMATIONS*/
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry)=>{
         console.log(entry)
@@ -23,7 +25,34 @@ hiddenElementsright.forEach((el) => observer.observe(el));
 const hiddenElementsmessage = document.querySelectorAll('.hidden-message');
 hiddenElementsmessage.forEach((el) => observerM.observe(el));
 
+/*VIDEO*/
 
+const video = document.querySelector("#voiceflow-video");
+const playButton=document.getElementById("playbutton");
+
+// Add 'play' class when video starts playing
+video.addEventListener("play", () => {
+  console.log("Video is playing");
+  video.classList.add('play');
+  playButton.classList.add('playbutton-hidden');
+});
+
+// Remove 'play' class when video is paused
+video.addEventListener("pause", () => {
+  console.log("Video is paused");
+  video.classList.remove('play');
+  playButton.classList.remove('playbutton-hidden');
+});
+
+// Optional: Function to play the video
+function playVideo() {
+  video.play();
+}
+
+// Optional: Function to pause the video
+function pauseVideo() {
+  video.pause();
+}
 
 /*MAKE CAROUSEL*/
 
@@ -31,17 +60,17 @@ const projects = [
     { 
         name: "Unpretentious", 
         description: "Stay casual but use clear diction. Mcdonald's is loved across cultures, so inclusion is a priority.", 
-        image: "img/cansera.png"
+        div:"Nice! Our fries are iconic."
     },
     { 
         name: "Lighthearted", 
         description: "Use playful language to affirm choices and create positive, memorable interactions with the customer.", 
-        image: "img/infusion.png"
+        div:"Nice! Our fries are iconic."
     },
     { 
         name: "Approachable", 
         description: "Always be ready to help and never judge. Offer suggestions to help guide the customer. ", 
-        image: "img/shiffon.jpeg"
+        div:"Hello there! I'm the McDonald's assistant. How can I help you today? <i>Check out deals. See the menu.</i>"
     }
 ];
 
@@ -52,7 +81,7 @@ function displayProjects() {
         dot.className = 'dot';
         dot.onclick = () => showProject(index);
         buttonContainer.appendChild(dot);
-    });
+    })
     // Show the first project by default
     showProject(0);
 }
@@ -63,7 +92,7 @@ function showProject(index) {
     displayElement.innerHTML = `
         <h1>${project.name}</h1>
         <p>${project.description}</p>
-        <img src="${project.image}" alt="${project.name}">
+        <div>${project.div}</div>
     `;
 
     // Update active dot
@@ -75,3 +104,4 @@ function showProject(index) {
 }
 // Initialize the page
 displayProjects();
+pauseVideo();
