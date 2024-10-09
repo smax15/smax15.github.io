@@ -134,21 +134,22 @@
                     <img src="img/landscape.png" alt="show apps to intents">
                 </div>
             </div>
-            <div class="case-study-frame-2">
+            <div class="case-study-frame">
                 <div>
                 <small>WRITING UTTERANCES</small>
                 <h2>Too Specific</h2>
                 <p>When translating user intents to utterances, we assumed people were mainly familiar with the McDonald’s menu and the app. Early version of utterances focused on requesting on specific menu items.</p>
                 </div>
                 <div>
-                    <div class="right-image">
-                        <div class="frame-2 hidden-left">
-                            <h3>Utterance</h3>
-                            <p>I want a McFlurry.</p>
+                    <div class="case-study-3-frames hidden-up">
+                        <div class="frame-2 light-mode-accent">
+                            <p><span class="frame-icon">❌ </span>I want a McFlurry</p>
                         </div>
-                        <div class="frame-2 hidden-left delay-2">
-                            <h3>Utterance</h3>
-                            <p>Can I get some fries?</p>
+                        <div class="frame-2 light-mode-accent">
+                            <p><span class="frame-icon">❌ </span>I'll have a Big Mac</p>
+                        </div>
+                        <div class="frame-2 light-mode-accent">
+                            <p> <span class="frame-icon">✅ </span>I need to wake up</p>
                         </div>
                     </div>
                 </div>
@@ -163,29 +164,37 @@
                     
                     Continually testing helped build our utterances bank. 
                     </p>
-                    <img style="height:400px; margin:auto; display:block" src="img/utterances.png" alt="a bank of utterances in voiceflow">
+                    <img id="utterances" src="img/utterances.png" alt="a bank of utterances in voiceflow">
                 </div>
-                <div class="large-image">
-                    <div class="speech-bubble-left hidden-up">
-                        <div class="speech-bubble-content hidden-message">
-                            I'm craving something sweet
+                <div class="message-frame">
+                    <div class="message-row">
+                        <div class="speech-bubble-left hidden-up">
+                            <div class="speech-bubble-content hidden-message">
+                                I'm craving something sweet
+                            </div>
                         </div>
-                    </div>
-                    <div class="speech-bubble-right hidden-up delay-2">
-                        <div class="speech-bubble-content hidden-message">
-                            Something sweet does sound good right now! <br>Which one of these look good to you?
+                    </div><!--close message row-->   
+                    <div class="message-row"> 
+                        <div class="speech-bubble-right hidden-up delay-2">
+                            <div class="speech-bubble-content hidden-message">
+                                Something sweet does sound good right now! <br>Which one of these look good to you?
+                            </div>
                         </div>
-                    </div>
-                    <div class="speech-bubble-right hidden-up delay-3">
-                        <div class="speech-bubble-content hidden-message">
-                            Okay
+                    </div><!--close message row-->    
+                    <div class="message-row">    
+                        <div class="speech-bubble-right hidden-up delay-3">
+                            <div class="speech-bubble-content hidden-message">
+                                Okay
+                            </div>
                         </div>
-                    </div>
-                    <div class="speech-bubble-left hidden-up delay-4">
-                        <div class="speech-bubble-content hidden-message">
-                            That sounds awesome!
+                    </div><!--close message row-->
+                    <div class="message-row">    
+                        <div class="speech-bubble-left hidden-up delay-4">
+                            <div class="speech-bubble-content hidden-message">
+                                That sounds awesome!
+                            </div>
                         </div>
-                    </div>
+                    </div>  <!--close message row-->  
                 </div>
             </div>
             <div id="takeaway2" class="bottom-case-study-frame light-mode-bottom">
@@ -250,7 +259,7 @@
                 <small>BUILDING VUI</small>
                 <h2>Adding One Item at a Time</h2>
                 <p>Followed the app’s functionality of adding one thing at a time into the cart. Works for the persona for people who are deciding as they explore but not for the person who already knows their order. </p>
-                <div class="large-image">
+                <div class="large-image hidden-up">
                     <img src="img/vui.png" alt="REWRITE THIS">
                 </div>
             </div>
@@ -258,13 +267,14 @@
                 <small>VOICEFLOW PROTOTYPE</small>
                 <h2>From Menu to Check Out</h2>
                 <p>Our final design used the flow of adding one item at a time.</p>
-                    <a onclick="playVideo()"><div id="playbutton" class="playbutton"></div></a>
+                <div class="large-image hidden-up">
                     <div class="frame-voiceflow-video" id="voice-videoframe">
-                    <video id="voiceflow-video" class="voiceflow-video" width="1000" height="800" controls preload="auto">
-                        <source src="img/McDonalds_ChatAssistant.mp4" type="video/mp4">
+                    <video id="voiceflow-video" class="voiceflow-video" controls preload="auto" muted>
+                        <source src="img/Cropped_McDonalds.mp4" type="video/mp4">
                             You browser does not support the video tag
                     </video>
                     </div>
+                </div>
             </div>
             <div class="case-study-frame">
                 <small>FUTURE FUNCTIONALITY</small>
@@ -278,8 +288,8 @@
     <footer>
         <h2 class="heading">Thanks for stopping by 👋</h2>
         <p>Want to grab a matcha latte and chat?</p>
-            <p><a href="">Email Me</a> 🌸
-            <a href="">Linkedin</a>
+            <p><a href="mailto:sara.w.ma@gmail.com">Email Me</a> 🌸
+            <a href="https://www.linkedin.com/in/sarawma/">Linkedin</a>
         </p> 
     </footer>
 </body>

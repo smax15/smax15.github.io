@@ -182,6 +182,5 @@ button{
    /*this collapses everything to one column at 768px*/
    @media screen and (max-width: 900px) {
     body{
-        background-color:red;
     }
    }
