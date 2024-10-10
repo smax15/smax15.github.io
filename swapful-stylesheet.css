@@ -1,12 +1,11 @@
 body{
     background:#ffffff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 36px;
+    font-size: 16px;
 }
 button{
-    font-size:40px;
+    font-size:20px;
 }
-
 
 
 
@@ -54,7 +53,7 @@ button{
     position: relative;
     background-color:#efefef;
     border-radius: 12px;
-    padding:80px 50px 80px 50px;
+    padding:20px 20px 20px 20px;
     font-size: 40px;
     text-transform: uppercase;
     border:none;
@@ -91,16 +90,16 @@ button{
     /*position: relative;*/
     background-color: rgb(229, 229, 229);
     border-radius:12px;
-    padding:10px;
-    margin:10px;
-    width:50px;
+    padding:5px;
+    margin:5px;
+    width:30px;
     display:inline-block;
 }
 
 /*HINT BUTTON*/
 #hint{
     margin:50px;
-    padding:20px 50px 20px 50px;
+    padding:15px 20px 15px 20px;
     border-radius:20px;
     border: 2px rgb(21, 21, 21) solid;
     background-color: #333;
@@ -171,16 +170,14 @@ button{
 .win-popup{
     background: #ffffff;
     position:absolute;
-    top:15%;
-    margin:5%;
+    top:10%;
     padding:50px 0px 50px 0px;
-    width:90%;
+    width:95%;
     text-align: center;
     border: 2px rgb(123, 122, 122) solid;
 }
 
    /*this collapses everything to one column at 768px*/
    @media screen and (max-width: 900px) {
-    body{
-    }
+    
    }
