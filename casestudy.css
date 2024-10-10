@@ -183,7 +183,6 @@ blockquote{
     left:20%;
  }
  .frame-voiceflow-video{
-    display: block; 
     border-radius: 8px;
     overflow: hidden;
  }
@@ -354,15 +353,6 @@ blockquote{
         left:0%;
     }
   
-    .voiceflow-video{
-        position:absolute;
-        top:0px;
-        left:0px;
-        opacity:50%;
-        transition: opacity ease 0.3s;
-        width:95%;
-        height:95%;
-     }
     .message-frame{
         position:relative;
         margin:auto;
