@@ -344,8 +344,7 @@ blockquote{
     /*framing video*/
     .frame-phone-video{
         display: block; 
-        width:286px; 
-        height:500px; 
+        width:286px;  
         border-radius: 44px;
         overflow: hidden;
         position:relative;
@@ -492,4 +491,17 @@ blockquote{
         .message-frame{
             width:80%;
         }
+        /*framing video*/
+        #frame-phone-video{
+            overflow:visible;
+        }
+        .frame-phone-video{
+         background-color: var(--accent-black);
+         overflow:visible;
+        }
+        .frame-voiceflow-video{
+        background-color: var(--accent-white);
+        }
+        
      }
+
