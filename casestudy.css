@@ -165,12 +165,13 @@ blockquote{
  }
 
  .left-image, .right-image{
-    width:80%;
+    width:90%;
     margin:auto;
 }
-/*.utterances{
-    style="height:400px; margin:auto; display:block"
-}*/
+#utterances{
+    width:100%;
+    padding-top:0px;
+}
 
  /*framing video*/
  .frame-phone-video{
@@ -210,15 +211,15 @@ blockquote{
 
 /*CREATING SPEECH BUBBLES*/
 .message-frame{
-    width:400px;
+    width:90%;
     height:fit-content;
-    padding:30px;
+    padding:20px;
     border-radius: 8px;
     background-color: white;
     overflow:hidden;
 }
 .message-row{
-    width:400px;
+    width:100%;
     display:inline-block;
 }
 
@@ -226,7 +227,7 @@ blockquote{
 	position: relative;
 	border-radius: .4em;
     width: fit-content;
-    margin-top:20px;
+    margin-top:10px;
 }
 .speech-bubble-left{
 	background:var(--white);
@@ -241,7 +242,7 @@ blockquote{
     display: grid;
     grid-template-columns: repeat(1, 3fr);
     overflow:hidden;
-    width:500px;
+    width:800px;
 }
 .speech-bubble-right{
 	background: var(--accent-black);
@@ -277,7 +278,8 @@ blockquote{
     box-shadow:0px 3px 5px #e4e4e4;
 }
 .sweet-option img{
-    width:150px;
+    width:130px;
+    padding:10px;
 }
 .sweet-option p{
    margin-left:10px;
@@ -355,10 +357,16 @@ blockquote{
     .message-frame{
         position:relative;
         margin:auto;
-        width:95%;
+        width:90%;
     }
     .message-row{
         width:100%;
+    }
+    #utterances{
+        position:relative;
+        margin:auto;
+        width:95%;
+        padding-top:40px;
     }
 
     /*QR-code*/
@@ -443,7 +451,6 @@ blockquote{
         .frame-4{
             margin-bottom: 20px;
         }
-        
 
         .image-grid {
             display: grid;
