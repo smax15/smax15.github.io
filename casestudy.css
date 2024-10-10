@@ -170,7 +170,10 @@ blockquote{
 }
 #utterances{
     width:100%;
-    padding-top:0px;
+    padding:1px 0px 1px 0px;
+    background-color: white;
+    position:relative;
+    top:2px;
 }
 
  /*framing video*/
