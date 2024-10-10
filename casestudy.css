@@ -212,9 +212,11 @@ blockquote{
 /*CREATING SPEECH BUBBLES*/
 .message-frame{
     width:400px;
+    height:fit-content;
     padding:30px;
     border-radius: 8px;
-    border: 3px var(--white) solid;
+    background-color: white;
+    overflow:hidden;
 }
 .message-row{
     width:400px;
@@ -225,18 +227,26 @@ blockquote{
 	position: relative;
 	border-radius: .4em;
     width: fit-content;
-    margin-bottom:20px;
+    margin-top:20px;
 }
 .speech-bubble-left{
-	background: var(--accent-black);
-    color:var(--white);
+	background:var(--white);
+    color:var(--background-black);
     left:0px;
     display:block;
     float: left;
 }
+.speech-bubble-left-carousel{
+    position:relative;
+    left:-10px;
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    overflow:hidden;
+    width:500px;
+}
 .speech-bubble-right{
-	background: var(--white);
-    color:var(--background-black);
+	background: var(--accent-black);
+    color:var(--white);
     display:block;
     float: right;
     /*transition-delay: .8s;*/
@@ -251,38 +261,29 @@ blockquote{
 .delay-4{
     transition-delay:1.5s;
 }
-/*.speech-bubble-left:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 10%;
-	width: 0;
-	height: 0;
-	border: 20px solid transparent;
-	border-top-color: var(--accent-black);
-	border-bottom: 0;
-	border-left: 0;
-	margin-left: 0px;
-	margin-bottom: -20px;
+.delay-5{
+    transition-delay:2s;
 }
-
-.speech-bubble-right:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	right: 10%;
-	width: 0;
-	height: 0;
-	border: 20px solid transparent;
-	border-top-color: var(--white);
-	border-bottom: 0;
-	border-right: 0;
-	margin-right: 0px;
-	margin-bottom: -20px;
-}*/
 .speech-bubble-content{
     padding:10px;
 }
+
+/*styling messages with inner buttons*/
+.sweet-option{
+    border-radius: 8px;
+    border: 1px var(--accent-white) solid;
+    display: inline-block;
+    overflow:hidden;
+    background-color: white;
+    box-shadow:0px 3px 5px #e4e4e4;
+}
+.sweet-option img{
+    width:150px;
+}
+.sweet-option p{
+   margin-left:10px;
+}
+/*LIGHT MODE*/
 .light-mode{
     background-color: var(--accent-white);
     color:var(--background-black);
