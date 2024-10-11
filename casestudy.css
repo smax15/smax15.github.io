@@ -30,6 +30,12 @@ a{
     background-position: right 35% bottom 0%; 
     background-repeat: no-repeat; /* Do not repeat the image */
 }
+#scoretitle{
+    background-image: url("img/scoretitle.png");
+    background-size: 100%;
+    background-position: right 35% bottom 0%; 
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
 nav{
     max-width: 1200px;
     margin: 0 auto;
