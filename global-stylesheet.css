@@ -32,7 +32,7 @@ a{
 }
 .intro-container1{
     width:66%;
-    display: flex;
+    display:grid;
     align-items: center;
 }
 .intro-container2{

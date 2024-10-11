@@ -15,19 +15,19 @@ a{
 #amazontitle{
     background-image: url("img/amazoncover.png");
     background-size: 110%;
-    background-position: right 35% bottom 15%; /* Center the image */
+    background-position: right 35% bottom 15%; 
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 #mcdonaldstitle{
     background-image: url("img/mcdonaldstitle.png");
     background-size: 100%;
-    background-position: right 35% bottom 15%; /* Center the image */
+    background-position: right 35% bottom 15%; 
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 #canseratitle{
-    background-image: url("img/cansera.png");
+    background-image: url("img/canseratitle.png");
     background-size: 100%;
-    background-position: center; /* Center the image */
+    background-position: right 35% bottom 0%; 
     background-repeat: no-repeat; /* Do not repeat the image */
 }
 nav{
@@ -194,7 +194,18 @@ blockquote{
     width:100%;
     height:100%;
  }
+ #frame-gif{
+    overflow:hidden;
+    background-color: #14191a;
+    border-radius: 10px;
 
+ }
+ #center-image{
+    display:block;
+    margin:auto;
+    position:relative;
+    top:-25px;
+ }
 
  /*QR-code*/
 .qr-block{
