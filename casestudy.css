@@ -176,7 +176,7 @@ blockquote{
 }
 #utterances{
     width:100%;
-    padding:1px 0px 1px 0px;
+    padding:4px 0px 4px 0px;
     background-color: white;
     position:relative;
     top:2px;
@@ -238,6 +238,11 @@ blockquote{
     background-color: white;
     overflow:hidden;
 }
+.message-frame-clear{
+    width:100%;
+    background-color: none;
+    overflow:hidden;
+}
 .message-row{
     width:100%;
     display:inline-block;
@@ -283,6 +288,15 @@ blockquote{
 }
 .delay-5{
     transition-delay:2s;
+}
+.delay-6{
+    transition-delay:2.5s;
+}
+.delay-7{
+    transition-delay:3s;
+}
+.delay-8{
+    transition-delay:3.5s;
 }
 .speech-bubble-content{
     padding:10px;
