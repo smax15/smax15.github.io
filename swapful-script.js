@@ -279,7 +279,7 @@ function checkGrid() {
     var validWordsTracker = document.getElementById('validWords');
     var totalWords=correctWords+totalValidWords.length;
     finalWordsFound=totalWords;
-    validWordsTracker.innerHTML="Words: "+totalWords;
+    //validWordsTracker.innerHTML="Words: "+totalWords;
     
     return { correctWords, totalValidWordsCount: totalValidWords.length };
 }
