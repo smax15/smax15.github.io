@@ -21,7 +21,7 @@ const hiddenTheme=[];
 //DECLARING VARIABLES
 let swap =[];
 let moves=0;
-let hint=theme.length-1;
+let hint=0;
 let totalValidWords = []; // Moved outside the function to persist between calls
 let hintCount=0;
 let hintUsed=0;
@@ -80,14 +80,14 @@ function displayTheme(){
 function revealTheme(){
     //should use hint as an index to replace letter in hidden Theme for Theme
     hiddenTheme[hint]=theme[hint];
-    hint--;
-    console.log(hiddenTheme);
+    hint++;
     themeArea.innerHTML="";
     displayTheme();
     hintCount--;
     if(hintCount==0){
         disableHintButton();
     }
+    console.log("hintCount:"+hintCount);
     hintUsed++;
     const applyHintUsed=document.getElementById(`hintused`);
     //applyHintUsed.innerHTML="Hints: "+hintUsed;
@@ -210,13 +210,14 @@ function addhintCount(){
 }
 
 function checkHintAvailable(){
-    if(hintCount>0){
+    var untilHint=3-totalValidWords.length%3;
+    console.log("untilHint: "+untilHint);
+    if(hintCount<hiddenTheme.length&&totalValidWords.length>2&&untilHint==3){
         //enable hint button
         enableHintButton();        
         console.log("enable hint button");
         }
         else{
-            var untilHint=3-totalValidWords.length%3;
             const hintcaption = document.getElementById(`hint-counter`);
             if(untilHint==1){
                 hintcaption.innerHTML= untilHint+" word until the next hint";
@@ -224,7 +225,7 @@ function checkHintAvailable(){
             else{
                 hintcaption.innerHTML=untilHint+" words until the next hint";
             }
-            //console.log("You have "+ untilHint+" until next Hint");
+            console.log("You have "+ untilHint+" until next Hint");
         };
 }
 
@@ -332,18 +333,18 @@ function instructions() {
             <p>SWAPFUL<p>
             <h2>How to play</h2>
             <p class="instructions-text">
-                <h3>Spell 4 words related to today's theme.</h3>
+                <h3>Spell 4 words related to today's unknown theme.</h3>
                 <ul>
                     <img src="swapful_example.gif" alt="show game example of swapping letters and spelling a word" style="display:block; margin:auto;width:50%; padding-bottom:20px">
                     <li>Move letters by swapping spots.</li>
                     <li>Words are read by row.</li>
-                    <li>Letters of found-themed words cannot be moved.</li>
+                    <li>Letters of correct words will turn blue and cannot be moved.</li>
                 </ul>
                 <br>
                 <h3>Earn hints</h3>
                 <ul>
                     <li>For every 3 non-themed words you find, you earn a hint.</li>
-                    <li>Hints reveal theme letters one at a time, backwards.</li>
+                    <li>Hints reveal letters of the theme one at a time.</li>
                 </ul>
             </p>
             <div>
