@@ -212,6 +212,9 @@ function addhintCount(){
 function checkHintAvailable(){
     var untilHint=3-totalValidWords.length%3;
     console.log("untilHint: "+untilHint);
+    if(hintUsed==hiddenTheme.length){
+        disableHintButton();
+    }else{
     if(hintCount<hiddenTheme.length&&totalValidWords.length>2&&untilHint==3){
         //enable hint button
         enableHintButton();        
@@ -227,6 +230,7 @@ function checkHintAvailable(){
             }
             console.log("You have "+ untilHint+" until next Hint");
         };
+    }
 }
 
 //VALIDATING WORDS
@@ -262,6 +266,11 @@ function checkGrid() {
             console.log(`Row ${rowIndex + 1}: "${word}" is a valid word, but not a target answer.`);
             newValidWords++;
             totalValidWords.push(word);
+            //add word to word bank
+            var wordBank = document.getElementById('wordbank');
+            const newWord = document.createElement("span");
+            newWord.textContent = word + " ";
+            wordBank.appendChild(newWord);
             //check if there's enough hints to enable hint 
             if(totalValidWords.length%3==0){
                 addhintCount();
@@ -333,7 +342,7 @@ function instructions() {
             <p>SWAPFUL<p>
             <h2>How to play</h2>
             <p class="instructions-text">
-                <h3>Spell 4 words related to today's unknown theme.</h3>
+                <h3>Spell 4 words related to today's hidden theme.</h3>
                 <ul>
                     <img src="swapful_example.gif" alt="show game example of swapping letters and spelling a word" style="display:block; margin:auto;width:50%; padding-bottom:20px">
                     <li>Move letters by swapping spots.</li>
