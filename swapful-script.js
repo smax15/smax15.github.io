@@ -99,9 +99,7 @@ function storeLetter(letter, index) {
         swap.push({ letter, index });
         //change the button background color to light blue
         const button = document.querySelector(`.image-item:nth-child(${index + 1})`);
-        if (button) {
             button.style.backgroundColor = '#a8a8a8';
-        }
         console.log(`First selection: ${letter} at index ${index}`);
     } else {
         swap.push({ letter, index });
@@ -119,12 +117,15 @@ function storeLetter(letter, index) {
             // Swap letters based on their indices
             const [first, second] = swap;
             [letters[first.index], letters[second.index]] = [letters[second.index], letters[first.index]];
-            
             console.log(`Swapped ${first.letter} at index ${first.index} with ${second.letter} at index ${second.index}`);
             console.log('Updated letters array:', letters.join(', '));
             
             // Refresh the display and check the grid
             displayLetters();
+            const button = document.querySelector(`.image-item:nth-child(${first.index+1})`);
+            button.classList.add('flip');
+            const button1 = document.querySelector(`.image-item:nth-child(${second.index+1})`);
+            button1.classList.add('flip');
             checkGrid();
             moves++;
             document.getElementById('moves').innerHTML=('Moves: '+moves);
@@ -150,6 +151,9 @@ function displayLetters() {
         letterBox.className = 'image-item';
         letterBox.addEventListener('click', () => storeLetter(letter, index));
         letterBox.innerHTML = `<span>${letter}</span>`;
+        const outerBox = document.createElement('div');
+        outerBox.className='outer-box';
+        outerBox.innerHTML +=letterBox.outerHTML;
         gameArea.appendChild(letterBox);
     });
 }

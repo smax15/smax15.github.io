@@ -47,19 +47,41 @@ button{
 .image-item {
     /*position: relative;*/
     border:none;
-    background-color:#efefef;
     border-radius: 10px;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    color:black;
-    display: flex;
     padding: 22px 22px;
-    flex-direction: column;
+    transform: rotateY(0deg);
+    transition: transform 2s ease;
+}
+.outerBox{
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    color:black;
+    background-color:#efefef;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    transform: rotateY(0deg);
 }
-
+.flip {
+    animation: flipCard .2s ease;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+   
+@keyframes flipCard {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
 
 
 /*THEME*/
