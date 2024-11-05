@@ -128,18 +128,20 @@ button{
 }
 #hint:active{
     color:rgb(145, 145, 145);
+    background-color: #333;
     border: 2px rgb(145, 145, 145) solid;
     transition: background-color 0.3s ease;
 }
 #hint:disabled{
     background-color: #e5e5e5;
     color:rgb(178, 178, 178);
-    border: 2px #9b9b9b solid;
+    border: 2px #e5e5e5 solid;
     transition: background-color 0.3s ease;
 }
 
 #hint:hover{
     background-color: lightgray;
+    border-color: lightgray;
     transition: text-decoration 0.3s ease;
 }
 
