@@ -1,21 +1,21 @@
 //GAME INPUTS
- const letters=[
-    "g", "o", "m", "p", "c", "u","b","l","m","e", "t", "o", "p", "l","o","u"
-];
  /*const letters=[
+    "g", "o", "m", "p", "c", "u","b","l","m","e", "t", "o", "p", "l","o","u"
+];*/
+ const letters=[
     "z", "i", "v", "e", "n", "o","n","r","o","f", "i", "u", "e", "f","r","e"
- ];//*/
+ ];//
  //answers
- const answer=["pump", "clog", "mule","boot"];
- //const answer=["five", "four", "nine","zero"];
+ //const answer=["pump", "clog", "mule","boot"];
+ const answer=["five", "four", "nine","zero"];
 
  //valid words
  const otherwords=[ "bump","boom","mump","comb","comm","comp","coop","coot","club","culm","lump", "loom", "goop","plum","bloc","buco","clop","coup","cube","glum","gulp","pleb","plug","pube","puce","pool","tump","umbo","blog","bull","cleg","clog","come","cope","cull","geum","glob","glom","glop","memo","mobe","mome","mope","mull","poem","pome","pull","temp","tomb","bell","bleu","blue","boll","cell","clou","cool","clue","cult","gull","loup","lube","loot","luce","mell","moll","mule","pego","poll","pule","tulp","ulmo","belt","blet","blot","bole","bolt","bout","bute","celt","clot","cole","colt","cute","glue","glut","lept","lobe","lope","luge","melt","meou","moot","mole","molt","motu","moue","mute","pelt","peut","plot","pole","poop","pout","tube","cote","gelt","gout","loge","mote","ogle","poet","tegu","tome","tope","tool","lout","lute","tell","toll","tolu","tule","ulto","tole"
  ];
 
 //theme
-const theme=["s","h","o","e"];
-//const theme=["n","u","m","b","e","r"]
+//const theme=["s","h","o","e"];
+const theme=["n","u","m","b","e","r"]
 const hiddenTheme=[];
 
 //DECLARING VARIABLES
