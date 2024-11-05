@@ -456,6 +456,16 @@ blockquote{
             background-position: center; /* Center the image */
             background-repeat: no-repeat; /* Do not repeat the image */
         }
+        #canseratitle{
+            background-image:  linear-gradient( #292178, #362A9A,#4834D5,#6C56E9, #806CEB );
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+        }
+        #scoretitle{
+            background-image:  linear-gradient( #A51D12,#C52D14, #DA3210, #FF7700 );
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+        }
      }
 
     /*this collapses everything to one column at 900px*/

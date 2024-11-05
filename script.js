@@ -1,17 +1,17 @@
 const projects = [
     { 
-        name: "Unpretentious", 
-        description: "Stay casual but use clear diction. Mcdonald's is loved across cultures, so inclusion is a priority.", 
+        name: "Dashboard", 
+        description: "My UX research led to the $2 millions in additional funding from the Nationa Cancer Institute.", 
         image: "img/cansera.png"
     },
     { 
-        name: "Lighthearted", 
-        description: "Use playful language to affirm choices and create positive, memorable interactions with the customer.", 
+        name: "Cancer App", 
+        description: "Predict your symptoms for specific calendar days to plan your life's special events. ", 
         image: "img/infusion.png"
     },
     { 
-        name: "Approachable", 
-        description: "Always be ready to help and never judge. Offer suggestions to help guide the customer. ", 
+        name: "Ring", 
+        description: "I led the marketing launch for Shiffon's best-selling product, the Duet Pinky Ring.", 
         image: "img/shiffon.jpeg"
     }
 ];
@@ -32,9 +32,9 @@ function showProject(index) {
     const project = projects[index];
     const displayElement = document.getElementById('project-display');
     displayElement.innerHTML = `
-        <h1>${project.name}</h1>
-        <p>${project.description}</p>
+        <h2>${project.name}</h2>
         <img src="${project.image}" alt="${project.name}">
+        <p>${project.description}</p>
     `;
 
     // Update active dot
