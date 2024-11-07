@@ -100,11 +100,11 @@ button{
     padding: 0px 0px 0px 0px;
 }
 #theme-grid{
-    /*display: grid;
+    display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap:5px;
-    padding: 5px 0px 5px 0px;*/
-    margin:2px 50px 2px 50px;
+    padding: 5px 0px 5px 0px;
+    margin:2px 20px 2px 20px;
     display:inline-block;
 }
 .theme-item{
