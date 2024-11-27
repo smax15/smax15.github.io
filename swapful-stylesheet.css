@@ -3,22 +3,53 @@ body{
     font-family: Inter, sans-serif;
     font-size: 12px;
 }
+h1{
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.alfaslabone{
+        font-family: "Alfa Slab One", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+}
+
 button{
     font-size:12px;
     color:black;
+    padding:0px;
 }
+
 /*MENU*/
 #menu{
-    padding:16px 0px 16px 0px;
     width:100%;
-    border-bottom: 1px gray solid;
+    box-shadow: 0px 4px 2px -2px rgb(0 0 0 / 10%);
 }
 #menu-container{
-    width:80%;
+    max-width:40%;
     margin:auto;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+#menu-container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    border:none;
+    background-color: white;
+    height:42px;
+    width:42px;
+}
+#moves{
+    font-weight: bold;
+}
+
+/*GAME AREA*/
 #container{
     position:relative;
     max-width:40%;
@@ -27,12 +58,6 @@ button{
     padding: 16px 0px 16px 0px;
     position:relative;
 }
-.tracker{
-    /*border: 1px red solid;*/
-    padding:8px;
-}
-
-/*GAME AREA*/
 #gamearea{
     max-width:100%;
     margin-top:16px;
@@ -44,6 +69,9 @@ button{
     margin-top:15px;
     width:100%;
 }
+
+
+/*LETTER SWAP ANIMATIONS*/
 .image-item {
     /*position: relative;*/
     border:none;
@@ -89,7 +117,7 @@ button{
     margin:auto;
     max-width:100%;
     border-radius:10px;
-    border: 1px rgb(123, 122, 122) solid;
+    border: 1px rgb(217, 217, 217) solid;
     text-transform: uppercase;
 }
 .theme-top{
@@ -99,247 +127,232 @@ button{
     border-radius:10px 10px 0px 0px;
     padding: 0px 0px 0px 0px;
 }
-#theme-grid{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap:5px;
+#theme-content{
     padding: 5px 0px 5px 0px;
     margin:2px 20px 2px 20px;
     display:inline-block;
 }
-.theme-item{
-    /*position: relative;*/
-    background-color: rgb(229, 229, 229);
-    border-radius:12px;
-    padding:5px;
-    margin:5px;
-    width:30px;
-    display:inline-block;
-}
 
-/*HINT BUTTON*/
-#hint{
-    margin:16px;
-    padding:16px 36px 16px 36px;
-    border-radius:10px;
-    border: 2px rgb(21, 21, 21) solid;
-    background-color: #333;
-    color:white;
-}
-#hint:active{
-    color:rgb(145, 145, 145);
-    background-color: #333;
-    border: 2px rgb(145, 145, 145) solid;
-    transition: background-color 0.3s ease;
-}
-#hint:disabled{
-    background-color: #e5e5e5;
-    color:rgb(178, 178, 178);
-    border: 2px #e5e5e5 solid;
-    transition: background-color 0.3s ease;
-}
-
-#hint:hover{
-    background-color: lightgray;
-    border-color: lightgray;
-    transition: text-decoration 0.3s ease;
-}
 
 /*WORD BANK*/
 #wordbank{
-    padding:16px 0px 16px 0px;
+    margin-top:12px;
+    padding:16px 5px 16px 5px;
     width: 100%;
-    border: 1px gray solid;
+    border: 1px rgb(217, 217, 217) solid;
     border-radius: 10px;
+    text-align: left;
 }
 
 
 /*INSTRUCTIONS BUTTON*/
 #instructions{
-    border-radius: 20px;
-    width:150px;
-    border: 2px solid rgb(123, 122, 122);
     cursor: pointer;
-    text-decoration: none;
     transition: all 0.3s ease;
-    background-color: #f0f0f0;
-    color: #333;
 }
 
-#instructions:hover {
-    border-color: rgb(229, 229, 229);
-    background-color: #e0e0e0;
-}
-
-#instructions:active {
-    background-color: #d0d0d0;
-    transform: translateY(1px);
-}
 
 /*INSTRUCTIONS CONTENT*/
 .instructions-content{
-    padding:20px;
+    padding:12px;
+    text-align:center;
+    margin:auto;
 }
-.instructions, ul{
-    text-align: left;
+
+.background{
+    background-color: white;
+    opacity:.7;
+    position:absolute;
+    top:0px;
+    height:500px;
+    width:100%;
 }
 #play{
-    border-radius: 10px;
-    border: 2px solid rgb(123, 122, 122);
-    margin-top: 16px;
-    padding: 16px 36px;
     cursor: pointer;
-    display: inline-block;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: white;
+    border: none;
+    padding:16px;
+    position:absolute;
+    right:0px;
+    top:0px;
 }
 
 /*WIN POPUP*/
+.instruction-popup{
+    background: #ffffff;
+    position:relative;
+    top:-65%;
+    width:50%;
+    box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.25);
+    margin:auto;
+    padding:24px;
+}
 .win-popup{
     background: #ffffff;
-    position:absolute;
-    top:10%;
-    padding:50px 0px 50px 0px;
-    width:95%;
-    text-align: center;
-    border: 2px rgb(123, 122, 122) solid;
+    position:relative;
+    top:-65%;
+    width:50%;
+    box-shadow: 0px -1px 10px 0px rgba(0, 0, 0, 0.25);
+    margin:auto;
+    padding:24px;
 }
- /*this collapses everything to one column at 768px*/
+.box{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #D8D6D6;
+    font-size: 16px;
+    color: #000;
+    font-weight:700;
+    margin:auto;
+    margin-bottom:24px;
+}
+#shareButton{
+    padding: 15px 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #000;
+    border:none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#shareButton:hover{
+    background: #505050;
+}
+
+
+
+ /*this collapses everything to one column at 850 px*/
  @media screen and (max-width: 850px) {
 
-/*MENU*/
-#menu{
-    padding:16px 0px 16px 0px;
-    width:100%;
-}
-#menu-container{
-    width:80%;
-    margin:auto;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-#container{
-    position:relative;
-    max-width:90%;
-    margin:auto;
-    text-align: center;
-    padding: 16px 0px 16px 0px;
-    position:relative;
-}
-.tracker{
-    /*border: 1px red solid;*/
-    padding:8px;
-}
+    /*MENU*/
+    #menu{
+        position:relative;
+        width:105%;
+        left:-10px;
+    }
+    #menu-container{
+        max-width:85%;
+        margin:auto;
+    }
+    #menu-container div{
+        display: flex;
+        align-items: center;
+    }
+    .icon{
+        float:right;
+        cursor: pointer;
+    }
+    .icon:hover{
+        background-color: green;
+    }
+    #container{
+        position:relative;
+        max-width:90%;
+        margin:auto;
+        text-align: center;
+        position:relative;
+    }
+    .tracker{
+        /*border: 1px red solid;*/
+        padding:8px;
+    }
 
-/*GAME AREA*/
-#gamearea{
-    max-width:100%;
-    margin-top:16px;
-}
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 4fr);
-    gap: 10px;
-    margin-top:15px;
-    width:100%;
-}
-.image-item {
-    /*position: relative;*/
-    border:none;
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 22px 22px;
-    transform: rotateY(0deg);
-    transition: transform 2s ease;
-}
-.outerBox{
-    border-radius: 10px;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-
-/*THEME*/
-#theme{
-    margin:auto;
-    max-width:100%;
-    border-radius:10px;
-    text-transform: uppercase;
-}
-.theme-top{
-    background-color: rgb(210, 230, 249);
-    width:100%;
-    border-bottom: 2px rgb(210, 230, 249) solid;
-    border-radius:10px 10px 0px 0px;
-    padding: 0px 0px 0px 0px;
-}
-#theme-grid{
-    /*display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap:5px;
-    padding: 5px 0px 5px 0px;*/
-    margin:2px 50px 2px 50px;
-    display:inline-block;
-}
-.theme-item{
-    /*position: relative;*/
-    border-radius:12px;
-    padding:5px;
-    margin:5px;
-    width:30px;
-    display:inline-block;
-}
-
-/*HINT BUTTON*/
-#hint{
-    margin:16px;
-    padding:16px 36px 16px 36px;
-    border-radius:10px;
-}
-
-/*WORD BANK*/
-#wordbank{
-    padding:16px 0px 16px 0px;
-    width: 100%;
-    border: 1px gray solid;
-    border-radius: 10px;
-}
+    /*GAME AREA*/
+    #gamearea{
+        max-width:100%;
+        margin-top:16px;
+    }
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 4fr);
+        gap: 10px;
+        margin-top:15px;
+        width:100%;
+    }
+    .image-item {
+        /*position: relative;*/
+        border:none;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 22px 22px;
+        transform: rotateY(0deg);
+        transition: transform 2s ease;
+    }
+    .outerBox{
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
 
 
-/*INSTRUCTIONS BUTTON*/
-#instructions{
-    border-radius: 20px;
-    border: 2px solid rgb(123, 122, 122);
-    cursor: pointer;
-}
+    /*THEME*/
+    #theme{
+        margin:auto;
+        max-width:100%;
+        border-radius:10px;
+        text-transform: uppercase;
+    }
+    .theme-top{
+        background-color: rgb(210, 230, 249);
+        width:100%;
+        border-bottom: 2px rgb(210, 230, 249) solid;
+        border-radius:10px 10px 0px 0px;
+        padding: 0px 0px 0px 0px;
+    }
 
-/*INSTRUCTIONS CONTENT*/
-.instructions-content{
-    padding:20px;
-}
-.instructions, ul{
-    text-align: left;
-}
-#play{
-    border-radius: 10px;
-    border: 2px solid rgb(123, 122, 122);
-    margin-top: 16px;
-    padding: 16px 36px;
-    cursor: pointer;
-    display: inline-block;
+    /*WORD BANK*/
+    #wordbank{
+        min-height:24px;
+        padding:10px 12px 2px 12px;
+        width: 93%;
+        border-radius: 10px;
+    }
 
-}
+    /*INSTRUCTIONS BUTTON*/
+    #instructions{
+        cursor: pointer;
+    }
 
-/*WIN POPUP*/
-.win-popup{
-    position:absolute;
-    top:10%;
-    padding:50px 0px 50px 0px;
-    width:95%;
-    text-align: center;
-}
+    /*INSTRUCTIONS CONTENT*/
+    .instructions-content{
+        padding:20px;
+    }
+
+    .instruction-popup{
+        position:absolute;
+        top:70px;
+        left:-2px;
+        bottom:0px;
+        padding:12px 0px 0px 0px;
+        width:100%;
+        text-align: center;
+        min-height:500px;
+    }
+
+    /*WIN POPUP*/
+    .win-popup{
+        position:absolute;
+        top:70px;
+        left:-2px;
+        bottom:0px;
+        padding:12px 0px 0px 0px;
+        width:100%;
+        text-align: center;
+        min-height:500px;
+    }
 
     
-   }
+}

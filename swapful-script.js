@@ -1,98 +1,39 @@
 //GAME INPUTS
- const letters=[
-    "g", "o", "m", "p", "c", "u","b","l","m","e", "t", "o", "p", "l","o","u"
-];
  /*const letters=[
+    "g", "o", "m", "p", "c", "u","b","l","m","e", "t", "o", "p", "l","o","u"
+];*/
+ const letters=[
     "z", "i", "v", "e", "n", "o","n","r","o","f", "i", "u", "e", "f","r","e"
- ];//*/
+ ];//
  //answers
- const answer=["pump", "clog", "mule","boot"];
- //const answer=["five", "four", "nine","zero"];
+ //const answer=["pump", "clog", "mule","boot"];
+ const answer=["five", "four", "nine","zero"];
 
  //valid words
  const otherwords=[ "none","bump","boom","mump","comb","comm","comp","coop","coot","club","culm","lump", "loom", "goop","plum","bloc","buco","clop","coup","cube","glum","gulp","pleb","plug","pube","puce","pool","tump","umbo","blog","bull","cleg","clog","come","cope","cull","geum","glob","glom","glop","memo","mobe","mome","mope","mull","poem","pome","pull","temp","tomb","bell","bleu","blue","boll","cell","clou","cool","clue","cult","gull","loup","lube","loot","luce","mell","moll","mule","pego","poll","pule","tulp","ulmo","belt","blet","blot","bole","bolt","bout","bute","celt","clot","cole","colt","cute","glue","glut","lept","lobe","lope","luge","melt","meou","moot","mole","molt","motu","moue","mute","pelt","peut","plot","pole","poop","pout","tube","cote","gelt","gout","loge","mote","ogle","poet","tegu","tome","tope","tool","lout","lute","tell","toll","tolu","tule","ulto","tole"
  ];
 
 //theme
-const theme=["s","h","o","e"];
-//const theme=["n","u","m","b","e","r"]
-const hiddenTheme=[];
+const theme="numbers";
 
 //DECLARING VARIABLES
 let swap =[];
 let moves=0;
-let hint=0;
 let totalValidWords = []; // Moved outside the function to persist between calls
-let hintCount=0;
-let hintUsed=0;
 let finalWordsFound;
 
 //THEME
 //Show the whole theme at the end of the game 
 function loadTheme(){
-    const themeArea = document.getElementById("theme-grid");
+    const themeArea = document.getElementById("theme-content");
     if (!themeArea) {
         console.error("Theme area element not found");
         return;
     }
 
-    themeArea.innerHTML = '';
+    themeArea.textContent = theme;
     
-    theme.forEach((letterTheme, index) => {
-        const themeBox = document.createElement('div');
-        themeBox.className = 'theme-item';
-        themeBox.innerHTML = `<span>${letterTheme}</span>`;
-        themeArea.appendChild(themeBox);
-    });
-    console.log('this is theme ' +hint)
 }
-
-const themeArea = document.getElementById("theme-grid");
-
-//This makes each letter of the theme into - to hide it
-function hideTheme(){
-    if (!themeArea) {
-        console.error("Theme area element not found");
-        return;
-    }
-
-    themeArea.innerHTML = '';
-    //add "-" to hiddenTheme
-    for (let i=0; i<theme.length;i++){
-        const placeholder = "-";
-        hiddenTheme.push(placeholder);
-    }
-    displayTheme();
-    console.log('this is theme ' +hint)
-}
-
-//This shows the theme (full, half, no revealed) during the game
-function displayTheme(){
-    hiddenTheme.forEach((letterTheme, index) => {
-        const themeBox = document.createElement('div');
-        themeBox.className = 'theme-item';
-        themeBox.innerHTML = `<span>${letterTheme}</span>`;
-        themeArea.appendChild(themeBox);
-    });
-}
-
-//this reveals one letter of the theme at a time 
-function revealTheme(){
-    //should use hint as an index to replace letter in hidden Theme for Theme
-    hiddenTheme[hint]=theme[hint];
-    hint++;
-    themeArea.innerHTML="";
-    displayTheme();
-    hintCount--;
-    if(hintCount==0){
-        disableHintButton();
-    }
-    console.log("hintCount:"+hintCount);
-    hintUsed++;
-    const applyHintUsed=document.getElementById(`hintused`);
-    //applyHintUsed.innerHTML="Hints: "+hintUsed;
-}
-
 //SWAPPING LETTERS
 function storeLetter(letter, index) {
     if (swap.length === 0) {
@@ -174,8 +115,6 @@ function finishPuzzle() {
         stopTimer();
         // Show popup
         showWinPopup();
-        // Reveal the theme
-        loadTheme();
     } else {
         console.log("You're still playing. Keep going!");
     }
@@ -184,57 +123,17 @@ function finishPuzzle() {
 function showWinPopup() {
     const popup = document.createElement('div');
     popup.className = 'win-popup';
+    popup.id="win";
     popup.innerHTML = `
-        <h2>Hooray!</h2>
-        <p>You finished Swapful in <strong>${moves+1} moves</strong>,</p>
-        <p>in ${finalWordsFound} words, and using ${hintUsed} hints.</p>
-        <p>Your time was ${formatTime(minutes)}:${formatTime(seconds)}.</p>
-        <p>Today's theme:<strong>${theme.join("")}</strong></p>
-        <button onclick="location.href='https://forms.gle/GH7r1RwYGgMww9JCA'">Give Sara Feedback!</button>
-    `;
+        <div class="instructions-content">
+        <button id="play" onclick="removeWin()"><img src="icons/Close_round.svg"></button>
+        <h1>Hooray!</h1>
+        <p>You finished Swapful in</p>
+        <div class="box"> <span class="alfaslabone">${moves+1} </span>moves</div>
+        <button id="shareButton" onclick="shareResults()">Share your results</button>
+        </div>
+        `;
     document.body.appendChild(popup);
-}
-
-//HINT BUTTON
-function disableHintButton(){
-    const button = document.getElementById(`hint`);
-            button.disabled = true;
-}
-
-function enableHintButton(){
-    const button = document.getElementById(`hint`);
-            button.disabled = false;
-            const hintcaption = document.getElementById(`hint-counter`);
-            hintcaption.innerHTML="";
-}
-
-//add to hintCount when valid word is added
-function addhintCount(){
-    hintCount++;
-}
-
-function checkHintAvailable(){
-    var untilHint=3-totalValidWords.length%3;
-    console.log("untilHint: "+untilHint);
-    if(hintUsed==hiddenTheme.length){
-        disableHintButton();
-    }else{
-    if(hintCount<hiddenTheme.length&&totalValidWords.length>2&&untilHint==3){
-        //enable hint button
-        enableHintButton();        
-        console.log("enable hint button");
-        }
-        else{
-            const hintcaption = document.getElementById(`hint-counter`);
-            if(untilHint==1){
-                hintcaption.innerHTML= untilHint+" word until the next hint";
-            }
-            else{
-                hintcaption.innerHTML=untilHint+" words until the next hint";
-            }
-            console.log("You have "+ untilHint+" until next Hint");
-        };
-    }
 }
 
 //VALIDATING WORDS
@@ -275,11 +174,6 @@ function checkGrid() {
             const newWord = document.createElement("span");
             newWord.textContent = word + " ";
             wordBank.appendChild(newWord);
-            //check if there's enough hints to enable hint 
-            if(totalValidWords.length%3==0){
-                addhintCount();
-            };
-            checkHintAvailable();
         } else {
             console.log(`Row ${rowIndex + 1}: "${word}" is not a recognized word or has been found before.`);
         }
@@ -301,7 +195,6 @@ function checkGrid() {
     let seconds = 0;
     let minutes = 0;
 
-    const display = document.getElementById('timer');
     //const startStopButton = document.getElementById('startStop');
     //const resetButton = document.getElementById('reset');
 
@@ -309,9 +202,6 @@ function checkGrid() {
         return time.toString().padStart(2, '0');
     }
 
-    function updateDisplay() {
-        display.textContent = `${formatTime(minutes)}:${formatTime(seconds)}`;
-    }
     function startTimer(){
         timer = setInterval(() => {
             seconds++;
@@ -319,7 +209,6 @@ function checkGrid() {
                 seconds = 0;
                 minutes++;
             }
-            updateDisplay();
         }, 1000);
     }
 
@@ -333,55 +222,69 @@ function checkGrid() {
         isRunning = false;
         seconds = 0;
         minutes = 0;
-        updateDisplay();
     }
 
 //Instructions
 function instructions() {
+    const background = document.createElement('div');
+    background.className = 'background';
+    background.id = 'background';
     const popup = document.createElement('div');
-    popup.className = 'win-popup';
+    popup.className = 'instruction-popup';
     popup.id = 'instructions-box';
     popup.innerHTML = `
         <div class="instructions-content">
-            <p>SWAPFUL<p>
-            <h2>How to play</h2>
+
+            <button id="play" onclick="removeInstructions()"><img src="icons/Close_round.svg"></button>
+            <h1>How to Play</h1>
             <p class="instructions-text">
-                <h3>Spell 4 words related to today's hidden theme.</h3>
-                <ul>
-                    <img src="swapful_example.gif" alt="show game example of swapping letters and spelling a word" style="display:block; margin:auto;width:50%; padding-bottom:20px">
-                    <li>Move letters by swapping spots.</li>
-                    <li>Words are read by row.</li>
-                    <li>Letters of correct words will turn blue and cannot be moved.</li>
-                </ul>
-                <br>
-                <h3>Earn hints</h3>
-                <ul>
-                    <li>For every 3 non-themed words you find, you earn a hint.</li>
-                    <li>Hints reveal letters of the theme one at a time.</li>
-                </ul>
+                <h3>Swap letters to spell 4 words by row<br> related to today's theme.</h3>
+                <img src="instructions.gif" alt="example of swapping letters and spelling a word" style="display:block; margin:auto;width:80%; padding-bottom:20px">
             </p>
             <div>
-            <button id="play" onclick="removeInstructions()">Play</button>
         </div>
     `;
+
+    document.body.appendChild(background);
     document.body.appendChild(popup);
 }
 
 function removeInstructions() {
     const instructionsBox = document.getElementById('instructions-box');
+    const opacity = document.getElementById('background');
     if (instructionsBox) {
         instructionsBox.remove();
+        opacity.remove();
     }
-    startTimer(); // Assuming you want to start the timer after closing instructions
+    startTimer(); //start the timer after closing instructions
+}
+
+function removeWin() {
+    const winBox = document.getElementById('win');
+    const opacity = document.getElementById('background');
+    if (winBox) {
+        winBox.remove();
+        opacity.remove();
+    }
+}
+
+//Share Gmae
+function shareGame()    {
+ console.log("you are sharing game link");
+}
+
+//Share Results
+function shareResults()  {
+
+    console.log(`I won Swapful in ${moves} moves. Think you can beat me?`);
 }
 
 // Start game
 function startGame(){
     displayLetters();
     moves=0;
-    hideTheme();
     resetTimer();
-    updateDisplay();
+    loadTheme();
 } 
 
 //start game
