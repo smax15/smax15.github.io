@@ -219,7 +219,7 @@ button{
     background: #000;
     border:none;
     color: #FFF;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
