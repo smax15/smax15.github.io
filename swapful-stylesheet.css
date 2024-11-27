@@ -254,7 +254,9 @@ button{
         cursor: pointer;
     }
     .icon:hover{
-        background-color: green;
+        background-color: rgba(88, 89, 88, 0.538);
+        border-radius: 10px;
+        transition: opacity .2s ease;
     }
     #container{
         position:relative;
