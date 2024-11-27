@@ -3,41 +3,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content = "width=device-width, initial-scale=1.0">
         <title>Swapful</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="swapful-stylesheet.css">
     </head>
     <body>
         <div id="menu">
             <div id="menu-container">
-         <div id="timer" class="tracker">
-            <span id="tens"></span>:<span id="seconds"></span>
-         </div>
-         <!--<div id="hintused" class="tracker">
-            Hints: 0
-          </div>-->
-          <!--<div id="validWords" class="tracker">
-            Words: 0
-          </div>-->
-          <div id="moves" class="tracker">
+          <div id="moves">
             Moves: 0
           </div>
-         <button id=instructions onclick="instructions();stopTimer()">How to Play</button>
+          <div><h1> Swapful </h1></div>
+         <div id="icons">  
+            <button class="icon" id=instructions onclick="instructions();stopTimer()"><img src="icons/Question.svg" /></button>
+            <button class="icon" id=1 onclick="shareGame()"><img src="icons/share.svg" /></button>
+         </div>
         </div>
         </div>
         <div id="container">
             <div id="theme">
                 <div class="theme-top">Today's Theme</div>
-                <div id="theme-grid">
+                <div id="theme-content">
                 </div>
             </div>
-        <div id="gamearea">
-            Spell four 4-letter words
-            <div class="image-grid" id="game-grid">
+            <div id="gamearea">
+                Spell four 4-letter words
+                <div class="image-grid" id="game-grid">
+                </div>
             </div>
+            <div id="wordbank"></div>
         </div>
-        <button id="hint" onclick="revealTheme()" disabled>Hint</button>
-        <div id="hint-counter"></div>
-        <div id="wordbank"></div>
-    </div>
     <script src="swapful-script.js"></script>
     </body>
 </html>
