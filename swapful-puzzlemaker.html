@@ -4,10 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content = "width=device-width, initial-scale=1.0">
         <title>Swapful Admin</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
         <style>
             .container{
                 width:1000px;
                 margin: auto;
+            }
+            h1{
+                font-family: "Alfa Slab One", serif;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 24px;
             }
             .form-container{
                 float:left;
@@ -56,7 +65,7 @@
         <div class="container">
             <div class="form-container">
             <form>
-                <h2>Swapful Puzzle Maker</h2>
+                <h1>Swapful Puzzle Maker</h1>
                 <label for ="puzzleTheme">Theme:</label>
                 <input type ="text" id="puzzleTheme" name="puzzleTheme"><br>
                 <h2>Puzzle Answers</h2>
@@ -77,7 +86,7 @@
                  <button id="submit">Submit</button>
             </div>
             <div class="output">
-                <h2>Swapful Puzzle Outputs</h2>
+                <h1>Swapful Puzzle Outputs</h1>
                 <h3>Theme parsed:</h3>
                 <div id="themeParsed" class="outputvalues"></div>
                 <h3>Letter buttons:</h3>
@@ -86,6 +95,11 @@
                 <div id="correctWords" class="outputvalues"></div>
                 <h3>Possible Non-themed words:</h3>
                 <div id="ValidWords" class="outputvalues"></div>
+            </div>
+            <div class="output">
+                <h1>Swapful Word Combinations</h1>
+                <h3>Total possible words:</h3>
+                <div id="allPossibleWords" class="outputvalues"></div>
             </div>
         </div>
 <script>
@@ -100,6 +114,7 @@
             console.log(dateCheck);
         }
         }
+
     //validate four letters
     function validateFourLetters(word){
         if (word.length==4){
@@ -109,13 +124,15 @@
         }
     }
 
-
-
     //parse theme into letters
-    function parseWord(word,parsed){
-        parsed = word.split('').join(',');
-        return parsed;
-    }
+    function parseWord(list) {
+    // Split the word into an array of individual letters
+    const parsed = list.split('');
+    console.log("this is parsed: " + parsed);
+    
+    return parsed;
+}
+
     //store correct words
     function storeWord(answer,array){
     }
@@ -158,10 +175,65 @@
         correctdiv.textContent=correctAnswer;
         const letterDiv = document.getElementById('lettersParsed');
         letterDiv.textContent=word;
+        const combinations = createCombo(word);
+    
+        // If you want to get the words
+        const words = combinationsToWords(combinations);
+        console.log(words);
         return word;
         return correctAnswer;
         }
     }
+
+    //create all possible four letter combinations
+function createCombo(word) {
+    const comboDiv = document.getElementById('allPossibleWords');
+    
+    // Flatten the word array to get all letters
+    const allLetters = word.flat();
+    
+    // Generate all possible 4-letter combinations using combination algorithm
+    const combinations = generateCombinations(allLetters, 4);
+    
+    console.log("Total combinations:", combinations.length);
+    console.log("Sample combinations:", combinations.slice(0, 10)); // Log first 10 for preview
+    
+    comboDiv.textContent = `Total combinations: ${combinations.length}`;
+    
+    return combinations;
+}
+
+// Generate all possible combinations of k letters from an array
+function generateCombinations(letters, k) {
+    const combinations = [];
+    
+    // Recursive combination generator
+    function backtrack(start, currentCombo) {
+        // If current combination is the right length, add it
+        if (currentCombo.length === k) {
+            combinations.push([...currentCombo]);
+            return;
+        }
+        
+        // Try adding each remaining letter
+        for (let i = start; i < letters.length; i++) {
+            currentCombo.push(letters[i]);
+            backtrack(i + 1, currentCombo);
+            currentCombo.pop();
+        }
+    }
+    
+    backtrack(0, []);
+    
+    return combinations;
+}
+
+// Optional: Convert combinations to words if needed
+function combinationsToWords(combinations) {
+    return combinations.map(combo => combo.join(''));
+}
+
+
 
     document.getElementById("submit").addEventListener("click", submit);
 </script>

@@ -242,6 +242,7 @@ function instructions() {
                 <img src="instructions.gif" alt="example of swapping letters and spelling a word" style="display:block; margin:auto;width:80%; padding-bottom:20px">
             </p>
             <div>
+            <button id="playbutton" onclick="removeInstructions()">Let's Play!</button>
         </div>
     `;
 
@@ -268,15 +269,35 @@ function removeWin() {
     }
 }
 
-//Share Gmae
+//Share Game
 function shareGame()    {
- console.log("you are sharing game link");
+    this.addEventListener("click", async () => {
+        try {
+        await navigator.share({
+            title: "Want to play Swapful with me?",
+            url: "https://smax15.github.io/swapful.html",
+        });
+        console.log("Data was shared successfully");
+        } catch (err) {
+        console.error("error:", err.message);
+        }
+    });
 }
 
 //Share Results
 function shareResults()  {
-
-    console.log(`I won Swapful in ${moves} moves. Think you can beat me?`);
+        this.addEventListener("click", async () => {
+            try {
+            await navigator.share({
+                title: "Can you beat me?",
+                text: `I just finished Swapful in ${moves} moves.` ,
+                url: "https://smax15.github.io/swapful.html",
+            });
+            console.log("Data was shared successfully");
+            } catch (err) {
+            console.error("error:", err.message);
+            }
+        });
 }
 
 // Start game

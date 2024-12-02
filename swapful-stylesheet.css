@@ -211,7 +211,7 @@ button{
     margin:auto;
     margin-bottom:24px;
 }
-#shareButton{
+#shareButton, #playButton{
     padding: 15px 50px;
     justify-content: center;
     align-items: center;
