@@ -44,7 +44,12 @@ button{
     background-color: white;
     height:42px;
     width:42px;
+    border-radius: 100px;
     cursor: pointer;
+}
+.icon:hover{
+    background-color: #eaeaea;
+    border: 1px #dedede solid;
 }
 #moves{
     font-weight: bold;
@@ -150,12 +155,6 @@ button{
     text-align: left;
 }
 
-
-/*INSTRUCTIONS BUTTON*/
-#instructions{
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
 
 /*INSTRUCTIONS CONTENT*/
@@ -265,8 +264,7 @@ button{
     }
     .icon:hover{
         background-color: rgba(88, 89, 88, 0.538);
-        border-radius: 10px;
-        transition: opacity .2s ease;
+        transition: all .2s ease;
     }
     #container{
         position:relative;
