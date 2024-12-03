@@ -1,20 +1,21 @@
 //GAME INPUTS
- const letters=[
-    "g", "o", "m", "p", "c", "u","b","l","m","e", "t", "o", "p", "l","o","u"
-];
  /*const letters=[
-    "z", "i", "v", "e", "n", "o","n","r","o","f", "i", "u", "e", "f","r","e"
- ];//*/
+    "g", "o", "m", "p", "c", "u","b","l","m","e", "t", "o", "p", "l","o","u"
+];*/
+ const letters=[
+    "z", "i", "f", "e", "o", "n","n","r","o","f", "i", "u", "e", "v","r","e"
+ ];
  //answers
- const answer=["pump", "clog", "mule","boot"];
- //const answer=["five", "four", "nine","zero"];
+ //const answer=["pump", "clog", "mule","boot"];
+ const answer=["five", "four", "nine","zero"];
 
  //valid words
- const otherwords=[ "none","bump","boom","mump","comb","comm","comp","coop","coot","club","culm","lump", "loom", "goop","plum","bloc","buco","clop","coup","cube","glum","gulp","pleb","plug","pube","puce","pool","tump","umbo","blog","bull","cleg","clog","come","cope","cull","geum","glob","glom","glop","memo","mobe","mome","mope","mull","poem","pome","pull","temp","tomb","bell","bleu","blue","boll","cell","clou","cool","clue","cult","gull","loup","lube","loot","luce","mell","moll","mule","pego","poll","pule","tulp","ulmo","belt","blet","blot","bole","bolt","bout","bute","celt","clot","cole","colt","cute","glue","glut","lept","lobe","lope","luge","melt","meou","moot","mole","molt","motu","moue","mute","pelt","peut","plot","pole","poop","pout","tube","cote","gelt","gout","loge","mote","ogle","poet","tegu","tome","tope","tool","lout","lute","tell","toll","tolu","tule","ulto","tole"
- ];
+ /*const otherwords=[ "none","bump","boom","mump","comb","comm","comp","coop","coot","club","culm","lump", "loom", "goop","plum","bloc","buco","clop","coup","cube","glum","gulp","pleb","plug","pube","puce","pool","tump","umbo","blog","bull","cleg","clog","come","cope","cull","geum","glob","glom","glop","memo","mobe","mome","mope","mull","poem","pome","pull","temp","tomb","bell","bleu","blue","boll","cell","clou","cool","clue","cult","gull","loup","lube","loot","luce","mell","moll","mule","pego","poll","pule","tulp","ulmo","belt","blet","blot","bole","bolt","bout","bute","celt","clot","cole","colt","cute","glue","glut","lept","lobe","lope","luge","melt","meou","moot","mole","molt","motu","moue","mute","pelt","peut","plot","pole","poop","pout","tube","cote","gelt","gout","loge","mote","ogle","poet","tegu","tome","tope","tool","lout","lute","tell","toll","tolu","tule","ulto","tole"
+ ];*/
+ const otherwords=["enuf","erne","eruv","euro","even","ever","fere","fern","fief","fife","fine","fino","fire","firn","foin","fore","free","friz","froe","fuze","info","inro","iron","neif","neve","nevi","niff","noir","nori","nuff","ooze","orzo","ouzo","oven","over","reef","reif","rein","reno","rife","riff","rive","roof","roue","rove","ruer","ruff","ruin","rune","veer","vein","vier","viff","vine","vino","zein","zine","zone","zoon","zori","noon","nene","noun","noni","none","neon"];
 
 //theme
-const theme="shoes";
+const theme="numbers";
 
 //DECLARING VARIABLES
 let swap =[];
@@ -52,7 +53,7 @@ function storeLetter(letter, index) {
             console.log('number of moves:'+moves)
             //turn button back to white
             const button = document.querySelector(`.image-item:nth-child(${index + 1})`);
-            button.style.backgroundColor = '#efefef';
+            button.style.backgroundColor = '#eaeaea';
         }
         else{
             // Swap letters based on their indices

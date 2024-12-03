@@ -75,7 +75,8 @@ button{
 /*LETTER SWAP ANIMATIONS*/
 .image-item {
     /*position: relative;*/
-    border:none;
+    border: 1px #dedede solid;
+    background-color: #eaeaea;
     border-radius: 10px;
     font-size: 18px;
     font-weight: 700;
@@ -84,6 +85,10 @@ button{
     transform: rotateY(0deg);
     transition: transform 2s ease;
 }
+.image-item:hover{
+    background-color:#b8b8b8;
+    border: 1px #dedede solid;
+} 
 .outerBox{
     justify-content: center;
     align-items: center;
@@ -91,7 +96,7 @@ button{
     flex-direction: column;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     color:black;
-    background-color:#efefef;
+    background-color:#919191;
     border-radius: 10px;
     font-size: 18px;
     font-weight: 700;
