@@ -239,7 +239,10 @@ function instructions() {
             <h1>How to Play</h1>
             <p class="instructions-text">
                 <h3>Swap letters to spell 4 words by row<br> related to today's theme.</h3>
-                <img src="instructions.gif" alt="example of swapping letters and spelling a word" style="display:block; margin:auto;width:80%; padding-bottom:20px">
+                <video width="100%" autoplay loop muted> 
+                <source src="instructions.mp4" type="video/mp4" alt="example of swapping letters and spelling a word" >
+                Your browser does not support the video tag.
+                </video>
             </p>
             <div>
             <button id="playbutton" onclick="removeInstructions()">Let's Play!</button>
@@ -270,25 +273,22 @@ function removeWin() {
 }
 
 //Share Game
-function shareGame()    {
-    this.addEventListener("click", async () => {
-        try {
-        await navigator.share({
+function shareGame() {
+    try {
+        navigator.share({
             title: "Want to play Swapful with me?",
             url: "https://smax15.github.io/swapful.html",
         });
         console.log("Data was shared successfully");
-        } catch (err) {
+    } catch (err) {
         console.error("error:", err.message);
-        }
-    });
+    }
 }
 
 //Share Results
 function shareResults()  {
-        this.addEventListener("click", async () => {
             try {
-            await navigator.share({
+            navigator.share({
                 title: "Can you beat me?",
                 text: `I just finished Swapful in ${moves} moves.` ,
                 url: "https://smax15.github.io/swapful.html",
@@ -297,7 +297,6 @@ function shareResults()  {
             } catch (err) {
             console.error("error:", err.message);
             }
-        });
 }
 
 // Start game
