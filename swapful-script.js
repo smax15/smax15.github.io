@@ -68,6 +68,8 @@ function storeLetter(letter, index) {
             button.classList.add('flip');
             const button1 = document.querySelector(`.image-item:nth-child(${second.index+1})`);
             button1.classList.add('flip');
+            button1.style.backgroundColor = '#eaeaea';
+            button.style.backgroundColor = '#eaeaea';
             checkGrid();
             moves++;
             document.getElementById('moves').innerHTML=('Moves: '+moves);
